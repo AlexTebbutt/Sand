@@ -6,6 +6,11 @@ class Task extends BaseModel {
 	
 
 	protected $guarded = ['id'];
+	
+	protected static $rules =[
+		'title' => 'required',
+		'user_id' => 'required'
+	];
 
 	public function user()
 	{

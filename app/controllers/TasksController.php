@@ -1,18 +1,6 @@
 <?php
 
-use acme\services\TaskCreatorService;
-
 class TasksController extends BaseController {
-
-	protected $taskCreator;
-	
-	public function __construct(TaskCreatorService $taskCreator) {
-		
-		$this->taskCreator = $taskCreator;
-		
-	}
-
-
 
 	/**
 	 * Display a listing of the resource.
@@ -46,6 +34,17 @@ class TasksController extends BaseController {
 	 */
 	public function store()
 	{
+
+		$task = new Task(Input::all());
+
+		if (!$task->save())
+		{
+			
+			return Redirect::back()->withInput()->withErrors($task->getErrors());
+			
+		}
+
+/*
 		//Save the task to the DB
 		try
 		{
@@ -58,9 +57,10 @@ class TasksController extends BaseController {
 		
 		{
 			
-			Redirect::back()->withInput()->withErrors($e->getErrors());
+			return Redirect::back()->withInput()->withErrors($e->getErrors());
 			
 		}
+*/
 		
 
 /*
@@ -116,6 +116,15 @@ class TasksController extends BaseController {
 	public function update($id)
 	{
 		//
+		
+		$task = Task::find($id);
+		
+		$task->complete = Input::get('complete') ? Input::get('complete') : 0; 
+		
+		$task->save();
+		
+		return Redirect::to('tasks');
+		
 	}
 
 	/**
