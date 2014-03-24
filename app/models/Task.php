@@ -1,48 +1,50 @@
 <?php
 
-	class Task extends Eloquent {
-		
+use acme\validators\TaskValidator;
 
-		protected $guarded = ['id'];
+class Task extends BaseModel {
+	
 
-		public function user()
+	protected $guarded = ['id'];
+
+	public function user()
+	{
+		
+		return $this->belongsTo('User');
+		
+		
+	}
+	
+	
+	public static function find($id, $username = NULL)
+	{
+		
+		$task = static::with('user')->find($id);
+		
+		if ($task)
 		{
-			
-			return $this->belongsTo('User');
-			
-			
-		}
-		
-		
-		public static function find($id, $username = NULL)
-		{
-			
-			$task = static::with('user')->find($id);
-			
-			if ($task)
-			{
-		
-				if ($username and $task->user->username !== $username)
-					throw new Illuminate\Database\Eloquent\ModelNotFoundException;
-		
-				
-				return($task);
-			} else {
-				
+	
+			if ($username and $task->user->username !== $username)
 				throw new Illuminate\Database\Eloquent\ModelNotFoundException;
-				
-			}
+	
 			
-		}
-		
-		public static function byUsername($username)
-		{
+			return($task);
+		} else {
 			
-			return User::byUsername($username)->tasks;
+			throw new Illuminate\Database\Eloquent\ModelNotFoundException;
 			
 		}
 		
 	}
+	
+	public static function byUsername($username)
+	{
+		
+		return User::byUsername($username)->tasks;
+		
+	}
+	
+}
 
 
 ?>

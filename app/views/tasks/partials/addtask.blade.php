@@ -5,6 +5,8 @@
 		{{ Form::label('title','Task') }}
 		
 		{{ Form::text('title', null, ['class' => 'form-control']) }}
+		
+		{{ $errors->first('title') }}
 
 	</div>
 
@@ -13,6 +15,8 @@
 		{{ Form::label('note','Note') }}
 		
 		{{ Form::textarea('note', null, ['class' => 'form-control']) }}
+
+		{{ $errors->first('note') }}
 
 	</div>
 	

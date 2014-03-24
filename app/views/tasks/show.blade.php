@@ -12,4 +12,6 @@
 
 <p>{{ link_to('/tasks', 'All Tasks') }}</p>
 
+<h3>Add a task</h3>
+
 @stop

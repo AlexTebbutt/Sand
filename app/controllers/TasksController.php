@@ -1,6 +1,8 @@
 <?php
 
-class TasksController extends \BaseController {
+use acme\services\TaskCreatorService;
+
+class TasksController extends BaseController {
 
 	protected $taskCreator;
 	
@@ -50,7 +52,10 @@ class TasksController extends \BaseController {
 
 			$this->taskCreator->make(Input::all());
 			
-		} catch(acme\validators\ValidationException $e)
+		} 
+		
+		catch(acme\validators\ValidationException $e)
+		
 		{
 			
 			Redirect::back()->withInput()->withErrors($e->getErrors());

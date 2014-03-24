@@ -9,7 +9,7 @@ abstract class Validator {
 	public function isValid(array $attributes)
 	{
 		
-		$v = Validator::make($attributes, static::$rules);
+		$v = V::make($attributes, static::$rules);
 	
 		if($v->fails())
 		{

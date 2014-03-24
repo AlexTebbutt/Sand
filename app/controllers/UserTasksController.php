@@ -12,7 +12,7 @@ class UserTasksController extends \BaseController {
 		
 		$tasks = Task::byUsername($username);
 		
-		return View::make('tasks.index', compact('tasks'));
+		return View::make('tasks.usertasks', compact('tasks'));
 		
 	}
 

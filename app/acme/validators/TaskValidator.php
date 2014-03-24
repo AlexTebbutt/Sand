@@ -6,6 +6,7 @@ class TaskValidator extends Validator {
 
 	protected static $rules = [
 		'title' => 'required',
+		'note' => 'required',
 		'user_id' => 'required'
 	];
 

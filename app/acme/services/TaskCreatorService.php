@@ -2,6 +2,10 @@
 
 use acme\validators\TaskValidator;
 
+use acme\validators\ValidationException;
+
+use Task;
+
 class TaskCreatorService {
 
 	protected $validator;
@@ -25,9 +29,9 @@ class TaskCreatorService {
 			// Create a new task
 			
 			Task::create ([
-				'title' => $input['title'],
-				'note' => $input['note'],
-				'user_id' => $input['user_id']
+				'title' => $attributes['title'],
+				'note' => $attributes['note'],
+				'user_id' => $attributes['user_id']
 			]);
 			
 			return TRUE;
@@ -35,7 +39,7 @@ class TaskCreatorService {
 		}
 				
 		// If not, throw excpetion
-		throw new acme\validators\ValidationException('Task validation failed', $this->validator->getErrors());
+		throw new ValidationException('Task validation failed', $this->validator->getErrors());
 		
 	}
 
