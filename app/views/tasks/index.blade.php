@@ -19,7 +19,7 @@
 			
 				{{ link_to_task($task) }}
 				
-				{{ Form::open([''method' => 'PATCH', 'route' => ['task.update']]) }}
+				{{ Form::open(['method' => 'PATCH', 'route' => ['task.update']]) }}
 				
 					{{ Form::checkbox('completed') }}				
 				

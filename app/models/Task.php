@@ -1,7 +1,5 @@
 <?php
 
-use acme\validators\TaskValidator;
-
 class Task extends BaseModel {
 	
 

@@ -9,12 +9,14 @@
 |
 */
 
+/*
 Event::listen('illuminate.query', function($query)
 {
 	
-//	var_dump($query);
+	var_dump($query);
 	
 });
+*/
 
 
 /*
@@ -31,12 +33,50 @@ Event::listen('illuminate.query', function($query)
 
 //Home
 
-Route::get('/', ['as' => 'home', 'uses' => function()
-{
-	
-	return 'Welcome to SAND';
-	
-}]);
+Route::get('/', ['as' => 'home', 'uses' => 'ClientsController@index']);
+
+
+/*
+|--------------------------------------------------------------------------
+| Projects
+|--------------------------------------------------------------------------
+|
+| agencies: agency resource.
+|
+*/
+
+Route::resource('projects','ProjectsController');
+
+
+/*
+|--------------------------------------------------------------------------
+| Clients
+|--------------------------------------------------------------------------
+|
+| agencies: agency resource.
+|
+*/
+
+Route::resource('clients','ClientsController');
+
+// Route::get('/agencies', ['as' => 'agencies', 'uses' => 'AgenciesController@index']);
+
+
+/*
+|--------------------------------------------------------------------------
+| Contacts
+|--------------------------------------------------------------------------
+|
+| contacts: contacts resource.
+|
+*/
+
+/* Route::post('/contacts', 'ContactsController@store'); */
+
+
+Route::resource('contacts','ContactsController');
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +90,9 @@ Route::get('/', ['as' => 'home', 'uses' => function()
 |
 */
 
+
+Route::resource('tasks', 'TasksController');
+/*
 Route::get('/tasks', ['as' => 'tasks', 'uses' => 'TasksController@index']);
 
 Route::post('/tasks', 'TasksController@store');
@@ -57,10 +100,15 @@ Route::post('/tasks', 'TasksController@store');
 Route::patch('/tasks/{id}', ['as' => 'tasks.update', 'use' => 'TasksController@update']);
 
 Route::get('/tasks/{id}', 'TasksController@show')->where('id', '\d+');
+*/
 
 Route::get('/{username}/tasks', 'UserTasksController@index');
 
 Route::get('/{username}/tasks/{id}', ['as' => 'user.tasks.show', 'uses' => 'UserTasksController@show']);
+
+
+
+
 
 
 /*

@@ -11,7 +11,13 @@
 
 	<body>
 	
-		<div class="container col-md-6 col-md-offset-3">
+		<div class="container">
+	
+			<header>
+			
+				@include('layouts.partials.nav')
+			
+			</header>
 	
 			@yield('content')
 			
