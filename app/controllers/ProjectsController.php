@@ -9,8 +9,9 @@ class ProjectsController extends \BaseController {
 	 */
 	public function index()
 	{
-		
-		return View::make('projects.index');
+		$projects = Project::with('client', 'contact', 'phase')->get();
+
+		return View::make('projects.index', compact('projects'));
 		
 	}
 
@@ -21,7 +22,13 @@ class ProjectsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+	
+		$clients = Client::lists('name','id');
+		$contacts = Contact::lists('name','id');
+		$phases = Phase::lists('name','id');
+
+		return View::make('projects.create', compact('clients', 'contacts', 'phases'));
+		
 	}
 
 	/**
@@ -31,7 +38,21 @@ class ProjectsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		
+		//$project = new Project(Input::all());
+		$project = New Project();
+		$input = array_filter(Input::all(), 'strlen');
+		$project->fill($input);
+		
+		if(!$project->save())
+		{
+		
+			return Redirect::back()->withInput()->withErrors($project->getErrors());
+				
+		}
+		
+		return Redirect::to('projects');
+		
 	}
 
 	/**
@@ -53,7 +74,14 @@ class ProjectsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		
+		$project = Project::findOrFail($id);
+		$clients = Client::lists('name','id');
+		$contacts = Contact::lists('name','id');
+		$phases = Phase::lists('name','id');
+				
+		return View::make('projects.edit', compact('project','clients', 'contacts', 'phases'));
+		
 	}
 
 	/**
@@ -64,7 +92,14 @@ class ProjectsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		
+		$project = Project::findOrFail($id);
+		$input = array_filter(Input::all(), 'strlen');
+		$project->fill($input);
+		$project->save();
+		
+		return Redirect::to('projects');		
+		
 	}
 
 	/**

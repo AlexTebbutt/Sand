@@ -16,8 +16,9 @@ class BaseModel extends Eloquent
 			return $model->validate();
 			
 		});
-		
+
 	}
+
 	
 	public function validate()
 	{

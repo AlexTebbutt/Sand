@@ -15,12 +15,21 @@ class CreateProjectsTable extends Migration {
 		Schema::create('projects', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('title');
-			$table->text('summary');
-			$table->datetime('start_date');			
-			$table->datetime('due_date');
-			$table->decimal('estimated_value', 5, 2);
-			$table->decimal('estimated_time', 5, 2);
+			$table->integer('client_id');
+			$table->integer('contact_id');
+			$table->string('name');
+			$table->dateTime('start_date')->nullable();			
+			$table->dateTime('due_date')->nullable();
+			$table->dateTime('golive_date')->nullable();
+			$table->string('resource')->nullable();
+			$table->integer('phase_id');
+			$table->integer('percentage_complete')->default('0');
+			$table->string('estimate_number')->nullable();
+			$table->string('estimate_link')->nullable();
+			$table->string('estimate_phase')->nullable();
+			$table->decimal('value', 5, 2)->nullable();
+			$table->integer('estimated_development_time')->nullable();
+			$table->integer('actual_development_time')->nullable();
 			$table->timestamps();
 		});
 	}

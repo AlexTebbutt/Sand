@@ -17,13 +17,14 @@
 
 	function set_active($path, $state = 'active')
 	{
-
-		if(Request::segment('1') === $path)
+		
+		if(Request::query('tab') === $path)
 		{
 	
 			return 'class="' . $state . '" ';
 			
-		}
+		} 
+
 		
 	}
 

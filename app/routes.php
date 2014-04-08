@@ -3,7 +3,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Debugging
+| Debugging SQL
 |--------------------------------------------------------------------------
 |
 |
@@ -33,7 +33,12 @@ Event::listen('illuminate.query', function($query)
 
 //Home
 
-Route::get('/', ['as' => 'home', 'uses' => 'ClientsController@index']);
+Route::get('/', function()
+{
+
+	return Redirect::to('/clients');
+
+});
 
 
 /*
@@ -47,6 +52,8 @@ Route::get('/', ['as' => 'home', 'uses' => 'ClientsController@index']);
 
 Route::resource('projects','ProjectsController');
 
+Route::get('projects', ['as' => 'projects', 'uses' => 'ProjectsController@index']);
+
 
 /*
 |--------------------------------------------------------------------------
@@ -58,8 +65,6 @@ Route::resource('projects','ProjectsController');
 */
 
 Route::resource('clients','ClientsController');
-
-// Route::get('/agencies', ['as' => 'agencies', 'uses' => 'AgenciesController@index']);
 
 
 /*
