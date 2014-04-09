@@ -9,7 +9,7 @@ class ProjectsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$projects = Project::with('client', 'contact', 'phase')->get();
+		$projects = Project::with('client', 'contact', 'phase')->where('phase_id', '>', '1')->where('phase_id', '<', '8')->get();
 
 		return View::make('projects.index', compact('projects'));
 		
@@ -23,8 +23,8 @@ class ProjectsController extends \BaseController {
 	public function create()
 	{
 	
-		$clients = Client::lists('name','id');
-		$contacts = Contact::lists('name','id');
+		$clients = Client::orderBy('name')->lists('name','id');
+		$contacts = Contact::orderBy('name')->lists('name','id');
 		$phases = Phase::lists('name','id');
 
 		return View::make('projects.create', compact('clients', 'contacts', 'phases'));
@@ -76,8 +76,8 @@ class ProjectsController extends \BaseController {
 	{
 		
 		$project = Project::findOrFail($id);
-		$clients = Client::lists('name','id');
-		$contacts = Contact::lists('name','id');
+		$clients = Client::orderBy('name')->lists('name','id');
+		$contacts = Contact::orderBy('name')->lists('name','id');
 		$phases = Phase::lists('name','id');
 				
 		return View::make('projects.edit', compact('project','clients', 'contacts', 'phases'));
@@ -112,5 +112,41 @@ class ProjectsController extends \BaseController {
 	{
 		//
 	}
+	
+	
+	/* Non RESTful functions found here!! */
+
+	/**
+	 * Show the completed projects using a tailored view.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */	
+	public function showComplete()
+	{
+		
+		$projects = Project::with('client', 'contact', 'phase')->where('phase_id', '=', '8')->get();
+		
+		return View::make('projects.complete', compact('projects'));
+		
+	}
+	
+	/**
+	 * Show the pipeline projects using a tailored view.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */	
+	public function showPipeline()
+	{
+		
+		$projects = Project::with('client', 'contact', 'phase')->where('phase_id', '=', '1')->get();
+		
+		return View::make('projects.pipeline', compact('projects'));
+		
+	}
+		
+	
+	
 
 }

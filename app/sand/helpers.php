@@ -18,7 +18,7 @@
 	function set_active($path, $state = 'active')
 	{
 		
-		if(Request::query('tab') === $path)
+		if(Request::path() === $path)
 		{
 	
 			return 'class="' . $state . '" ';
@@ -27,5 +27,14 @@
 
 		
 	}
+	
+	function create_external_link($url, $linkText)
+	{
+		
+		return '<a href="http://' . $url . '" target="_blank">' . $linkText . '</a>';
+		
+	}
+	
+	
 
 ?>

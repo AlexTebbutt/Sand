@@ -42,6 +42,16 @@
 				{{ $errors->first('golive_date') }}
 									
 			</div>
+			
+			<div class="form-group col-md-2">
+			
+				{{ Form::label('likelihood', 'Likelihood') }}
+			
+				{{ Form::text('likelihood', NULL, ['class' => 'form-control']) }}
+
+				{{ $errors->first('likelihood') }}
+									
+			</div>			
 
 		</div>
 		
@@ -80,6 +90,10 @@
 					{{ Form::text('due_date', NULL, ['class' => 'form-control']) }}
 				
 				</div>
+
+		</div>
+		
+		<div class="row">
 				
 				<div class="form-group col-md-2">
 				
@@ -88,6 +102,16 @@
 					{{ Form::text('percentage_complete', 0, ['class' => 'form-control']) }}
 				
 				</div>
+				
+				<div class="form-group col-md-2">
+				
+					{{ Form::label('completed_date', 'Date Completed') }}
+				
+					{{ Form::text('completed_date', NULL, ['class' => 'form-control']) }}
+	
+					{{ $errors->first('completed_date') }}
+										
+				</div>				
 		
 		</div>
 		
@@ -129,7 +153,7 @@
 			
 			<div class="form-group col-md-2">
 			
-				{{ Form::label('estimated_development_time', 'Estimates Dev Time (H)') }}
+				{{ Form::label('estimated_development_time', 'Estimated Dev Time (H)') }}
 			
 				{{ Form::text('estimated_development_time', NULL, ['class' => 'form-control']) }}
 			

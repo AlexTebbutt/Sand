@@ -119,12 +119,15 @@ London',
 			array (
 				'id' => 10,
 				'name' => 'Lima London',
-				'address' => '',
-				'post_code' => '',
-				'main_phone' => '',
+				'address' => '31 Rathbone Place
+London W1T 1JH
+Restaurant : 0203 002 2640
+Head Office: 0207 0258 008',
+				'post_code' => 'W1T 1JH',
+				'main_phone' => '0203 002 2640',
 				'importance' => 7,
 				'created_at' => '2014-04-03 16:23:20',
-				'updated_at' => '2014-04-03 16:24:25',
+				'updated_at' => '2014-04-09 14:52:26',
 			),
 			10 => 
 			array (
@@ -202,6 +205,29 @@ London',
 				'importance' => NULL,
 				'created_at' => '2014-04-03 16:25:32',
 				'updated_at' => '2014-04-03 16:25:32',
+			),
+			17 => 
+			array (
+				'id' => 18,
+				'name' => 'Atticus Associates',
+				'address' => '',
+				'post_code' => '',
+				'main_phone' => '',
+				'importance' => 0,
+				'created_at' => '2014-04-09 14:20:30',
+				'updated_at' => '2014-04-09 14:20:30',
+			),
+			18 => 
+			array (
+				'id' => 19,
+				'name' => 'IOVOX',
+				'address' => '99c Talbot Road
+London, W11 2AT',
+				'post_code' => '',
+				'main_phone' => '',
+				'importance' => 0,
+				'created_at' => '2014-04-09 14:20:40',
+				'updated_at' => '2014-04-09 14:20:40',
 			),
 		));
 	}

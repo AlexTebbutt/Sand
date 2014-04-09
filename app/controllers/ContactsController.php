@@ -10,8 +10,8 @@ class ContactsController extends \BaseController {
 	public function index()
 	{
 		
-		$contacts = Contact::with('client')->get();
-		$clients = Client::lists('name','id');
+		$contacts = Contact::orderBy('name')->with('client')->get();
+		$clients = Client::orderBy('name')->lists('name','id');
 		
 		return View::make('contacts.index', compact('contacts', 'clients'));
 		

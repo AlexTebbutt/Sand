@@ -21,15 +21,17 @@ class CreateProjectsTable extends Migration {
 			$table->dateTime('start_date')->nullable();			
 			$table->dateTime('due_date')->nullable();
 			$table->dateTime('golive_date')->nullable();
+			$table->integer('likelihood')->nullable();
 			$table->string('resource')->nullable();
 			$table->integer('phase_id');
 			$table->integer('percentage_complete')->default('0');
 			$table->string('estimate_number')->nullable();
 			$table->string('estimate_link')->nullable();
 			$table->string('estimate_phase')->nullable();
-			$table->decimal('value', 5, 2)->nullable();
+			$table->decimal('value', 9, 2)->nullable();
 			$table->integer('estimated_development_time')->nullable();
 			$table->integer('actual_development_time')->nullable();
+			$table->dateTime('completed_date')->nullable();
 			$table->timestamps();
 		});
 	}

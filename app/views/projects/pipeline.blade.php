@@ -6,7 +6,7 @@
 
 	<div class="col-md-12">
 
-		<h1>Current Projects</h1>
+		<h1>Pipeline</h1>
 
 <!-- List current -->
 		<table class="table table-striped table-hover">
@@ -24,16 +24,16 @@
 					<th>Start Date</th>
 					
 					<th>Resource(s)</th>
-
-					<th>Current Phase</th>
-
-					<th>% Complete</th>
 					
-					<th>Due Date</th>
+					<th>Go Live Date</th>
 					
 					<th>Estimate</th>
 					
 					<th>Value (£)</th>
+					
+					<th>Estimated Dev Time (H)</th>
+					
+					<th>Likelihood</th>
 			
 				</tr>
 		
@@ -52,17 +52,17 @@
 					<td>{{ $project->start_date }}</td>
 					
 					<td>{{ $project->resource }}</td>
-
-					<td>{{ $project->phase->name }}</td>
-
-					<td>{{ $project->percentage_complete }}</td>
 					
-					<td>{{ $project->due_date }}</td>
+					<td>{{ $project->golive_date }}</td>
 					
 					<td>{{ create_external_link($project->estimate_link, $project->estimate_number) }}</td>
 					
 					<td>{{ $project->value }}</td>
-				
+					
+					<td>{{ $project->estimated_development_time }}</td>
+
+					<td>{{ $project->likelihood }}</td>
+									
 				</tr>
 			
 			@endforeach

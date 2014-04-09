@@ -10,7 +10,7 @@
 
 		{{ Form::open(['method' => 'POST', 'route' => ['projects.store'], 'class' => 'form']) }}
 
-			@include('projects/partials/_form', ['submitText' => 'Update Client']);
+			@include('projects/partials/_form')
 		
 		{{ Form::close() }}
 

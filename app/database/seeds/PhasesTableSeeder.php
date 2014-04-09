@@ -61,6 +61,13 @@ class PhasesTableSeeder extends Seeder {
 				'created_at' => '0000-00-00 00:00:00',
 				'updated_at' => '0000-00-00 00:00:00',
 			),
+			7 => 
+			array (
+				'id' => 8,
+				'name' => 'Complete',
+				'created_at' => '0000-00-00 00:00:00',
+				'updated_at' => '0000-00-00 00:00:00',
+			),
 		));
 	}
 

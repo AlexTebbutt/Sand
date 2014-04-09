@@ -46,13 +46,17 @@ Route::get('/', function()
 | Projects
 |--------------------------------------------------------------------------
 |
-| agencies: agency resource.
+| agencies: Projects resource.
 |
 */
 
+Route::get('projects/complete','ProjectsController@showComplete');
+
+Route::get('/projects/pipeline','ProjectsController@showPipeline');
+
 Route::resource('projects','ProjectsController');
 
-Route::get('projects', ['as' => 'projects', 'uses' => 'ProjectsController@index']);
+/* Route::get('projects', ['as' => 'projects', 'uses' => 'ProjectsController@index']); */
 
 
 /*
