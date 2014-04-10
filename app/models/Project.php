@@ -32,35 +32,60 @@ class Project extends Basemodel {
 	}
 	
 	
+	/* Date Mutators to set format correctly */
+
+	
 /*
-	// Mutator hacks to set date fields to NULL to allow them to store with no content.
-	public function setGoliveDateAttribute($value) 
-	{
-  
-    $this->attributes['golive_date'] = empty($value) ? null : $value;
-	
-	}
+	public function setGoliveDateAttribute($value)
+  {
+      $this->attributes['golive_date'] = Carbon::createFromFormat('d/m/Y', $value)->toDateString();
+  }
 
-	public function setStartDateAttribute($value) 
-	{
-  
-    $this->attributes['start_date'] = empty($value) ? null : $value;
-	
-	}
 
-	public function setDueDateAttribute($value) 
-	{
-  
-    $this->attributes['due_date'] = empty($value) ? null : $value;
-	
-	}
+	public function setDueDateAttribute($value)
+  {
+      $this->attributes['due_date'] = Carbon::createFromFormat('d/m/Y', $value)->toDateString();
+  }
+*/
 
-	public function setValueAttribute($value) 
-	{
+	public function setCompletedDateAttribute($value)
+  {
+      $this->attributes['completed_date'] = Carbon::createFromFormat('d/m/Y', $value)->toDateString();
+  }
+
+/*
+	public function setStartDateAttribute($value)
+  {
+      $this->attributes['start_date'] = Carbon::createFromFormat('d/m/Y', $value)->toDateString();
+  }
+*/
+
+
+	/* Date Accessors to get format correctly */
+
+
+/*
+	public function getGoliveDateAttribute($value) 
+  {
+     return Carbon::createFromFormat('Y-m-d', $value)->format('d/m/Y');
+  }
+
+	public function getDueDateAttribute($value)
+  {
+     return Carbon::createFromFormat('Y-m-d', $value)->format('d/m/Y');
+  }
+*/
   
-    $this->attributes['value'] = empty($value) ? null : $value;
-	
-	}
+	public function getCompletedDateAttribute($value)
+  {
+     return Carbon::createFromFormat('Y-m-d H:i:s', $value)->format('d/m/Y');
+  }
+  
+/*
+	public function getStartDateAttribute($value)
+  {
+     return Carbon::createFromFormat('Y-m-d', $value)->format('d/m/Y');
+  }    	
 */
 
 }

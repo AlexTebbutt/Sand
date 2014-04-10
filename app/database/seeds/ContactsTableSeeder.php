@@ -312,6 +312,18 @@ class ContactsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:28:46',
 				'updated_at' => '2014-04-10 09:28:46',
 			),
+			25 => 
+			array (
+				'id' => 26,
+				'client_id' => 20,
+				'name' => 'Tony Fox',
+				'role' => '',
+				'email' => 'tony@unknown.com',
+				'main_phone' => '',
+				'mobile_phone' => '',
+				'created_at' => '2014-04-10 12:37:49',
+				'updated_at' => '2014-04-10 12:37:49',
+			),
 		));
 	}
 
