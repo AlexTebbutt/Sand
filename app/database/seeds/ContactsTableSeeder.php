@@ -300,6 +300,18 @@ class ContactsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:07:45',
 				'updated_at' => '2014-04-09 15:07:45',
 			),
+			24 => 
+			array (
+				'id' => 25,
+				'client_id' => 18,
+				'name' => 'Ruari Burgham',
+				'role' => '',
+				'email' => 'ruari.burgham@sudler.com',
+				'main_phone' => '',
+				'mobile_phone' => '',
+				'created_at' => '2014-04-10 09:28:46',
+				'updated_at' => '2014-04-10 09:28:46',
+			),
 		));
 	}
 
