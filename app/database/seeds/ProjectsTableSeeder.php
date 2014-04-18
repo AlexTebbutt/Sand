@@ -24,16 +24,16 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 			'resource' => 'Simon (FE), Danny',
 				'phase_id' => 8,
-				'percentage_complete' => 0,
+				'percentage_complete' => 100,
 				'estimate_number' => '950',
 				'estimate_link' => 'https://diginutltd.freeagent.com/projects/564563/invoices',
-				'estimate_phase' => NULL,
+				'estimate_phase' => '12',
 				'value' => '300.00',
-				'estimated_development_time' => NULL,
-				'actual_development_time' => NULL,
-				'completed_date' => NULL,
+				'estimated_development_time' => 5,
+				'actual_development_time' => 4,
+				'completed_date' => '2014-03-27',
 				'created_at' => '2014-04-09 13:44:40',
-				'updated_at' => '2014-04-10 14:16:12',
+				'updated_at' => '2014-04-16 13:26:52',
 			),
 			1 => 
 			array (
@@ -47,16 +47,16 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 				'resource' => 'Alex',
 				'phase_id' => 8,
-				'percentage_complete' => 100,
+				'percentage_complete' => 0,
 				'estimate_number' => '959',
 				'estimate_link' => 'https://diginutltd.freeagent.com/invoices/8606567',
 				'estimate_phase' => 'Invoiced',
 				'value' => '288.00',
-				'estimated_development_time' => NULL,
-				'actual_development_time' => NULL,
-				'completed_date' => NULL,
+				'estimated_development_time' => 4,
+				'actual_development_time' => 6,
+				'completed_date' => '2014-03-27',
 				'created_at' => '2014-04-09 13:55:11',
-				'updated_at' => '2014-04-09 13:55:11',
+				'updated_at' => '2014-04-16 13:25:48',
 			),
 			2 => 
 			array (
@@ -77,9 +77,9 @@ class ProjectsTableSeeder extends Seeder {
 				'value' => '15500.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
-				'completed_date' => NULL,
+				'completed_date' => '2014-03-21',
 				'created_at' => '2014-04-09 14:04:45',
-				'updated_at' => '2014-04-09 14:04:45',
+				'updated_at' => '2014-04-17 14:49:43',
 			),
 			3 => 
 			array (
@@ -93,16 +93,16 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 			'resource' => 'Alex (BE)',
 				'phase_id' => 8,
-				'percentage_complete' => 100,
+				'percentage_complete' => 0,
 				'estimate_number' => '946',
 				'estimate_link' => 'https://diginutltd.freeagent.com/invoices/8542730',
 				'estimate_phase' => 'Paid',
 				'value' => '777.60',
-				'estimated_development_time' => NULL,
-				'actual_development_time' => NULL,
-				'completed_date' => NULL,
+				'estimated_development_time' => 12,
+				'actual_development_time' => 8,
+				'completed_date' => '2014-03-24',
 				'created_at' => '2014-04-09 14:06:39',
-				'updated_at' => '2014-04-09 14:06:39',
+				'updated_at' => '2014-04-16 13:48:39',
 			),
 			4 => 
 			array (
@@ -116,16 +116,16 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 			'resource' => 'Simon (BE), Danny',
 				'phase_id' => 8,
-				'percentage_complete' => 100,
+				'percentage_complete' => 0,
 				'estimate_number' => '880',
 				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/542398',
 				'estimate_phase' => 'Invoiced',
 				'value' => '1740.00',
-				'estimated_development_time' => NULL,
-				'actual_development_time' => NULL,
-				'completed_date' => NULL,
+				'estimated_development_time' => 29,
+				'actual_development_time' => 29,
+				'completed_date' => '2014-03-31',
 				'created_at' => '2014-04-09 14:08:00',
-				'updated_at' => '2014-04-09 14:08:00',
+				'updated_at' => '2014-04-17 14:49:57',
 			),
 			5 => 
 			array (
@@ -148,7 +148,7 @@ class ProjectsTableSeeder extends Seeder {
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:10:47',
-				'updated_at' => '2014-04-09 14:10:47',
+				'updated_at' => '2014-04-12 07:37:33',
 			),
 			6 => 
 			array (
@@ -166,12 +166,12 @@ class ProjectsTableSeeder extends Seeder {
 				'estimate_number' => NULL,
 				'estimate_link' => NULL,
 				'estimate_phase' => NULL,
-				'value' => NULL,
+				'value' => '22752.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:11:01',
-				'updated_at' => '2014-04-09 14:11:11',
+				'updated_at' => '2014-04-17 15:08:33',
 			),
 			7 => 
 			array (
@@ -185,7 +185,7 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 			'resource' => 'Anh (Design), Pete (FE), Simon (BE)',
 				'phase_id' => 4,
-				'percentage_complete' => 0,
+				'percentage_complete' => 10,
 				'estimate_number' => NULL,
 				'estimate_link' => NULL,
 				'estimate_phase' => NULL,
@@ -194,7 +194,7 @@ class ProjectsTableSeeder extends Seeder {
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:31:11',
-				'updated_at' => '2014-04-09 14:31:11',
+				'updated_at' => '2014-04-17 10:34:47',
 			),
 			8 => 
 			array (
@@ -228,19 +228,19 @@ class ProjectsTableSeeder extends Seeder {
 				'start_date' => NULL,
 				'due_date' => NULL,
 				'golive_date' => NULL,
-				'likelihood' => NULL,
-			'resource' => 'Simone (BE), Danny',
-				'phase_id' => 1,
+				'likelihood' => 80,
+			'resource' => 'Simon (BE), Danny',
+				'phase_id' => 2,
 				'percentage_complete' => 0,
 				'estimate_number' => NULL,
 				'estimate_link' => NULL,
 				'estimate_phase' => NULL,
-				'value' => NULL,
+				'value' => '1140.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:32:25',
-				'updated_at' => '2014-04-09 14:32:25',
+				'updated_at' => '2014-04-17 15:31:10',
 			),
 			10 => 
 			array (
@@ -254,16 +254,16 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 			'resource' => 'Simon (BE), Danny',
 				'phase_id' => 5,
-				'percentage_complete' => 75,
+				'percentage_complete' => 0,
 				'estimate_number' => NULL,
 				'estimate_link' => NULL,
 				'estimate_phase' => NULL,
-				'value' => NULL,
+				'value' => '480.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:33:05',
-				'updated_at' => '2014-04-09 14:33:05',
+				'updated_at' => '2014-04-17 15:07:08',
 			),
 			11 => 
 			array (
@@ -277,16 +277,16 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 			'resource' => 'Pete (FE), Julian (BE)',
 				'phase_id' => 5,
-				'percentage_complete' => 50,
+				'percentage_complete' => 0,
 				'estimate_number' => NULL,
 				'estimate_link' => NULL,
 				'estimate_phase' => NULL,
-				'value' => '11500.00',
+				'value' => '11088.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:35:00',
-				'updated_at' => '2014-04-09 14:35:00',
+				'updated_at' => '2014-04-17 15:37:09',
 			),
 			12 => 
 			array (
@@ -295,21 +295,21 @@ class ProjectsTableSeeder extends Seeder {
 				'contact_id' => 9,
 				'name' => 'Imbruvica iRep App',
 				'start_date' => NULL,
-				'due_date' => NULL,
+				'due_date' => '2015-04-05',
 				'golive_date' => NULL,
 				'likelihood' => NULL,
-				'resource' => 'Simon',
-				'phase_id' => 3,
+			'resource' => 'Simon (BE), Pete (FE)',
+				'phase_id' => 4,
 				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
+				'estimate_number' => '850',
+				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/506635',
 				'estimate_phase' => NULL,
-				'value' => NULL,
+				'value' => '20952.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:36:01',
-				'updated_at' => '2014-04-09 14:36:01',
+				'updated_at' => '2014-04-17 15:50:25',
 			),
 			13 => 
 			array (
@@ -320,7 +320,7 @@ class ProjectsTableSeeder extends Seeder {
 				'start_date' => NULL,
 				'due_date' => NULL,
 				'golive_date' => NULL,
-				'likelihood' => NULL,
+				'likelihood' => 10,
 				'resource' => NULL,
 				'phase_id' => 1,
 				'percentage_complete' => 0,
@@ -332,7 +332,7 @@ class ProjectsTableSeeder extends Seeder {
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:38:28',
-				'updated_at' => '2014-04-09 14:38:28',
+				'updated_at' => '2014-04-11 13:06:33',
 			),
 			14 => 
 			array (
@@ -359,29 +359,6 @@ class ProjectsTableSeeder extends Seeder {
 			),
 			15 => 
 			array (
-				'id' => 16,
-				'client_id' => 11,
-				'contact_id' => 14,
-				'name' => 'Siltuximab 1',
-				'start_date' => NULL,
-				'due_date' => NULL,
-				'golive_date' => NULL,
-				'likelihood' => NULL,
-				'resource' => NULL,
-				'phase_id' => 1,
-				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
-				'estimate_phase' => NULL,
-				'value' => NULL,
-				'estimated_development_time' => NULL,
-				'actual_development_time' => NULL,
-				'completed_date' => NULL,
-				'created_at' => '2014-04-09 14:56:28',
-				'updated_at' => '2014-04-09 14:56:28',
-			),
-			16 => 
-			array (
 				'id' => 17,
 				'client_id' => 11,
 				'contact_id' => 22,
@@ -403,7 +380,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:57:53',
 				'updated_at' => '2014-04-09 14:57:53',
 			),
-			17 => 
+			16 => 
 			array (
 				'id' => 18,
 				'client_id' => 11,
@@ -426,7 +403,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:58:09',
 				'updated_at' => '2014-04-09 14:58:09',
 			),
-			18 => 
+			17 => 
 			array (
 				'id' => 19,
 				'client_id' => 11,
@@ -449,7 +426,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:58:34',
 				'updated_at' => '2014-04-09 14:58:34',
 			),
-			19 => 
+			18 => 
 			array (
 				'id' => 20,
 				'client_id' => 11,
@@ -472,30 +449,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:58:56',
 				'updated_at' => '2014-04-09 14:58:56',
 			),
-			20 => 
-			array (
-				'id' => 21,
-				'client_id' => 11,
-				'contact_id' => 22,
-				'name' => 'Imbruvica 1',
-				'start_date' => NULL,
-				'due_date' => NULL,
-				'golive_date' => NULL,
-				'likelihood' => NULL,
-				'resource' => NULL,
-				'phase_id' => 1,
-				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
-				'estimate_phase' => NULL,
-				'value' => '20952.00',
-				'estimated_development_time' => NULL,
-				'actual_development_time' => NULL,
-				'completed_date' => NULL,
-				'created_at' => '2014-04-09 14:59:36',
-				'updated_at' => '2014-04-09 14:59:36',
-			),
-			21 => 
+			19 => 
 			array (
 				'id' => 22,
 				'client_id' => 11,
@@ -518,7 +472,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:59:55',
 				'updated_at' => '2014-04-09 14:59:55',
 			),
-			22 => 
+			20 => 
 			array (
 				'id' => 23,
 				'client_id' => 4,
@@ -541,7 +495,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:01:10',
 				'updated_at' => '2014-04-10 13:29:32',
 			),
-			23 => 
+			21 => 
 			array (
 				'id' => 24,
 				'client_id' => 1,
@@ -564,7 +518,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:04:41',
 				'updated_at' => '2014-04-09 15:04:41',
 			),
-			24 => 
+			22 => 
 			array (
 				'id' => 25,
 				'client_id' => 12,
@@ -587,7 +541,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:05:22',
 				'updated_at' => '2014-04-09 15:05:22',
 			),
-			25 => 
+			23 => 
 			array (
 				'id' => 26,
 				'client_id' => 13,
@@ -610,7 +564,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:06:12',
 				'updated_at' => '2014-04-09 15:06:12',
 			),
-			26 => 
+			24 => 
 			array (
 				'id' => 27,
 				'client_id' => 2,
@@ -633,7 +587,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:06:45',
 				'updated_at' => '2014-04-10 13:42:47',
 			),
-			27 => 
+			25 => 
 			array (
 				'id' => 28,
 				'client_id' => 16,
@@ -656,7 +610,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:08:30',
 				'updated_at' => '2014-04-09 15:08:30',
 			),
-			28 => 
+			26 => 
 			array (
 				'id' => 29,
 				'client_id' => 5,
@@ -679,30 +633,30 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:24:22',
 				'updated_at' => '2014-04-10 09:24:22',
 			),
-			29 => 
+			27 => 
 			array (
 				'id' => 30,
 				'client_id' => 3,
 				'contact_id' => 4,
 				'name' => 'Nissan FPS HTML Email',
 				'start_date' => NULL,
-				'due_date' => NULL,
-				'golive_date' => NULL,
-				'likelihood' => 80,
+				'due_date' => '2014-04-04',
+				'golive_date' => '2014-05-08',
+				'likelihood' => 100,
 				'resource' => NULL,
-				'phase_id' => 1,
+				'phase_id' => 3,
 				'percentage_complete' => 0,
 				'estimate_number' => '894',
 				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/554713',
 				'estimate_phase' => NULL,
-				'value' => '3120.00',
-				'estimated_development_time' => NULL,
+				'value' => '2700.00',
+				'estimated_development_time' => 45,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-10 09:26:24',
-				'updated_at' => '2014-04-10 09:26:24',
+				'updated_at' => '2014-04-17 14:12:27',
 			),
-			30 => 
+			28 => 
 			array (
 				'id' => 31,
 				'client_id' => 17,
@@ -725,7 +679,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:26:56',
 				'updated_at' => '2014-04-10 09:26:56',
 			),
-			31 => 
+			29 => 
 			array (
 				'id' => 32,
 				'client_id' => 2,
@@ -748,7 +702,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:27:38',
 				'updated_at' => '2014-04-10 09:27:38',
 			),
-			32 => 
+			30 => 
 			array (
 				'id' => 33,
 				'client_id' => 11,
@@ -771,7 +725,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:28:03',
 				'updated_at' => '2014-04-10 09:30:46',
 			),
-			33 => 
+			31 => 
 			array (
 				'id' => 34,
 				'client_id' => 19,
@@ -781,20 +735,20 @@ class ProjectsTableSeeder extends Seeder {
 				'due_date' => NULL,
 				'golive_date' => NULL,
 				'likelihood' => 50,
-				'resource' => NULL,
-				'phase_id' => 1,
+			'resource' => 'Pete (FE), Simon (BE), Anh',
+				'phase_id' => 3,
 				'percentage_complete' => 0,
 				'estimate_number' => NULL,
 				'estimate_link' => NULL,
 				'estimate_phase' => NULL,
-				'value' => '17568.00',
+				'value' => '10980.00',
 				'estimated_development_time' => 160,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-10 09:29:23',
-				'updated_at' => '2014-04-10 09:31:15',
+				'updated_at' => '2014-04-17 10:31:51',
 			),
-			34 => 
+			32 => 
 			array (
 				'id' => 35,
 				'client_id' => 18,
@@ -817,7 +771,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:29:53',
 				'updated_at' => '2014-04-10 09:29:53',
 			),
-			35 => 
+			33 => 
 			array (
 				'id' => 36,
 				'client_id' => 20,
@@ -833,12 +787,58 @@ class ProjectsTableSeeder extends Seeder {
 				'estimate_number' => NULL,
 				'estimate_link' => NULL,
 				'estimate_phase' => NULL,
-				'value' => NULL,
+				'value' => '10000.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-10 12:38:45',
-				'updated_at' => '2014-04-10 12:38:45',
+				'updated_at' => '2014-04-17 15:13:22',
+			),
+			34 => 
+			array (
+				'id' => 38,
+				'client_id' => 1,
+				'contact_id' => 23,
+				'name' => 'Golden Toaster Newsletter Form',
+				'start_date' => NULL,
+				'due_date' => NULL,
+				'golive_date' => NULL,
+				'likelihood' => NULL,
+				'resource' => NULL,
+				'phase_id' => 1,
+				'percentage_complete' => 0,
+				'estimate_number' => NULL,
+				'estimate_link' => NULL,
+				'estimate_phase' => NULL,
+				'value' => '1008.00',
+				'estimated_development_time' => NULL,
+				'actual_development_time' => NULL,
+				'completed_date' => NULL,
+				'created_at' => '2014-04-16 15:32:55',
+				'updated_at' => '2014-04-16 15:32:55',
+			),
+			35 => 
+			array (
+				'id' => 39,
+				'client_id' => 21,
+				'contact_id' => 27,
+				'name' => 'Facebook / Twitter Sharing Tool ',
+				'start_date' => NULL,
+				'due_date' => NULL,
+				'golive_date' => NULL,
+				'likelihood' => NULL,
+				'resource' => NULL,
+				'phase_id' => 1,
+				'percentage_complete' => 0,
+				'estimate_number' => NULL,
+				'estimate_link' => NULL,
+				'estimate_phase' => NULL,
+				'value' => '3168.00',
+				'estimated_development_time' => NULL,
+				'actual_development_time' => NULL,
+				'completed_date' => NULL,
+				'created_at' => '2014-04-16 15:33:29',
+				'updated_at' => '2014-04-17 15:13:01',
 			),
 		));
 	}

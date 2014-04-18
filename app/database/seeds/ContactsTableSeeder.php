@@ -303,14 +303,14 @@ class ContactsTableSeeder extends Seeder {
 			24 => 
 			array (
 				'id' => 25,
-				'client_id' => 18,
+				'client_id' => 11,
 				'name' => 'Ruari Burgham',
 				'role' => '',
 				'email' => 'ruari.burgham@sudler.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
 				'created_at' => '2014-04-10 09:28:46',
-				'updated_at' => '2014-04-10 09:28:46',
+				'updated_at' => '2014-04-17 15:50:56',
 			),
 			25 => 
 			array (
@@ -323,6 +323,18 @@ class ContactsTableSeeder extends Seeder {
 				'mobile_phone' => '',
 				'created_at' => '2014-04-10 12:37:49',
 				'updated_at' => '2014-04-10 12:37:49',
+			),
+			26 => 
+			array (
+				'id' => 27,
+				'client_id' => 21,
+				'name' => 'Initials Marketing Person',
+				'role' => '',
+				'email' => 'info@initialsmarketing.co.uk',
+				'main_phone' => '020 7747 7400',
+				'mobile_phone' => '',
+				'created_at' => '2014-04-16 15:34:35',
+				'updated_at' => '2014-04-16 15:34:35',
 			),
 		));
 	}

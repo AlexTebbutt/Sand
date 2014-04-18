@@ -68,6 +68,13 @@ class PhasesTableSeeder extends Seeder {
 				'created_at' => '0000-00-00 00:00:00',
 				'updated_at' => '0000-00-00 00:00:00',
 			),
+			8 => 
+			array (
+				'id' => 9,
+				'name' => 'Rejected',
+				'created_at' => '0000-00-00 00:00:00',
+				'updated_at' => '0000-00-00 00:00:00',
+			),
 		));
 	}
 

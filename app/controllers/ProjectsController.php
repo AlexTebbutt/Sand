@@ -9,9 +9,24 @@ class ProjectsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$projects = Project::with('client', 'contact', 'phase')->where('phase_id', '>', '1')->where('phase_id', '<', '8')->get();
+		
+		$details = new stdClass();
+		$details->summary = build_projects_summary('We currently have # projects in progress, valued at £x.xx', 'current');
+		$sortBy = (!is_null(Request::get('sortBy')) ? Request::get('sortBy') : 'name');
+		$direction = (!is_null(Request::get('direction')) ? Request::get('direction') : 'ASC');
+/* 		$projects = Project::orderBy($sortBy, $direction)->with('client', 'contact', 'phase')->where('phase_id', '>', '1')->where('phase_id', '<', '8')->get();	 */
+		
+		$projects = Project::join('clients', 'clients.id', '=', 'projects.client_id')
+     ->join('contacts', 'contacts.id', '=', 'projects.contact_id')
+     ->join('phases', 'phases.id', '=', 'projects.phase_id')
+     ->where('phase_id', '>', '1')
+     ->where('phase_id', '<', '8')
+     ->select(array('projects.*','clients.name as clientName','contacts.name as contactName','phases.name as phaseName'))
+     ->orderBy($sortBy, $direction)->get(); 
 
-		return View::make('projects.index', compact('projects'));
+		Session::put('redirect', URL::full());
+
+		return View::make('projects.index', compact('projects', 'details'));
 		
 	}
 
@@ -98,7 +113,7 @@ class ProjectsController extends \BaseController {
 		$project->fill($input);
 		$project->save();
 		
-		return Redirect::to('projects');		
+		return Redirect::to(check_redirect('projects'));		
 		
 	}
 
@@ -124,10 +139,23 @@ class ProjectsController extends \BaseController {
 	 */	
 	public function showComplete()
 	{
+
+		$details = new stdClass();
+		$details->summary = build_projects_summary('We have completed # projects, total value: £x.xx', 'complete');
+		$sortBy = (!is_null(Request::get('sortBy')) ? Request::get('sortBy') : 'name');
+		$direction = (!is_null(Request::get('direction')) ? Request::get('direction') : 'ASC');
+		//$projects = Project::orderBy($sortBy, $direction)->with('client', 'contact', 'phase')->where('phase_id', '=', '8')->get();
 		
-		$projects = Project::with('client', 'contact', 'phase')->where('phase_id', '=', '8')->get();
+		$projects = Project::join('clients', 'clients.id', '=', 'projects.client_id')
+     ->join('contacts', 'contacts.id', '=', 'projects.contact_id')
+     ->join('phases', 'phases.id', '=', 'projects.phase_id')
+     ->where('phase_id', '=', '8')
+     ->select(array('projects.*','clients.name as clientName','contacts.name as contactName','phases.name as phaseName'))
+     ->orderBy($sortBy, $direction)->get(); 
+
+		Session::put('redirect', URL::full());
 		
-		return View::make('projects.complete', compact('projects'));
+		return View::make('projects.complete', compact('projects', 'details'));
 		
 	}
 	
@@ -139,10 +167,23 @@ class ProjectsController extends \BaseController {
 	 */	
 	public function showPipeline()
 	{
+
+		$details = new stdClass();
+		$details->summary = build_projects_summary('We have # potential projects, prospective total value: £x.xx', 'pipeline');	
+		$sortBy = (!is_null(Request::get('sortBy')) ? Request::get('sortBy') : 'name');
+		$direction = (!is_null(Request::get('direction')) ? Request::get('direction') : 'ASC');		
+		//$projects = Project::orderBy($sortBy, $direction)->with('client', 'contact', 'phase')->where('phase_id', '=', '1')->get();
 		
-		$projects = Project::with('client', 'contact', 'phase')->where('phase_id', '=', '1')->get();
+		$projects = Project::join('clients', 'clients.id', '=', 'projects.client_id')
+     ->join('contacts', 'contacts.id', '=', 'projects.contact_id')
+     ->join('phases', 'phases.id', '=', 'projects.phase_id')
+     ->where('phase_id', '=', '1')
+     ->select(array('projects.*','clients.name as clientName','contacts.name as contactName','phases.name as phaseName'))
+     ->orderBy($sortBy, $direction)->get(); 
 		
-		return View::make('projects.pipeline', compact('projects'));
+		Session::put('redirect', URL::full());
+		
+		return View::make('projects.pipeline', compact('projects', 'details'));
 		
 	}
 		

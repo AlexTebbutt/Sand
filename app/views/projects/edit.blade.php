@@ -1,4 +1,9 @@
-@extends('layouts.master')
+@extends('layouts.masters.projects')
+
+@section('scripts')		
+{{ HTML::style('css/datepicker.css') }}
+{{ HTML::script('js/bootstrap-datepicker.js') }}
+@stop
 
 @section('content')
 

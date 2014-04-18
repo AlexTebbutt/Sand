@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.masters.projects')
 
 @section('content')
 
@@ -7,34 +7,36 @@
 	<div class="col-md-12">
 
 		<h1>Pipeline</h1>
-
-<!-- List current -->
+		
+		<p>{{ $details->summary }}</p>
+		
+		<!-- List current -->
 		<table class="table table-striped table-hover">
 		
 			<thead>
 			
 				<tr>
-				
-					<th>Project Name</th>
-									
-					<th>Client</th>
-			
-					<th>Contact</th>
 
-					<th>Start Date</th>
-					
-					<th>Resource(s)</th>
-					
-					<th>Go Live Date</th>
-					
-					<th>Estimate</th>
-					
-					<th>Value (£)</th>
-					
-					<th>Estimated Dev Time (H)</th>
-					
-					<th>Likelihood</th>
+					<th>{{ sort_table_by('projects/pipeline', 'name', 'Project Name') }}</th>				
+									
+					<th>{{ sort_table_by('projects/pipeline' , 'clientName', 'Client') }}</th>
 			
+					<th>{{ sort_table_by('projects/pipeline' , 'contactName', 'Contact') }}</th>
+
+					<th>{{ sort_table_by('projects/pipeline', 'start_date', 'Start Completed') }}</th>					
+
+					<th>{{ sort_table_by('projects/pipeline', 'resource', 'Resource(s)') }}</th>					
+
+					<th>{{ sort_table_by('projects/pipeline', 'golive_date', 'Go Live Date') }}</th>					
+
+					<th>{{ sort_table_by('projects/pipeline', 'estimate_number', 'Estimate') }}</th>					
+
+					<th>{{ sort_table_by('projects/pipeline', 'value', 'Value (£)') }}</th>				
+
+					<th>{{ sort_table_by('projects/pipeline', 'estimated_development_time', 'Estimated Dev Time (H)') }}</th>				
+					
+					<th>{{ sort_table_by('projects/pipeline', 'likelihood', 'Likelihood') }}</th>				
+
 				</tr>
 		
 			</thead>

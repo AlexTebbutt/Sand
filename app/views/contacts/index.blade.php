@@ -16,7 +16,7 @@
 			
 				<tr>
 				
-					<th>Name</th>
+					<th>{{ sort_table_by('contacts', 'name', 'Name') }}</th>
 			
 					<th>Agency</th>
 				

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.masters.projects')
 
 @section('content')
 
@@ -7,6 +7,8 @@
 	<div class="col-md-12">
 
 		<h1>Current Projects</h1>
+		
+		<p>{{ $details->summary }}</p>
 
 <!-- List current -->
 		<table class="table table-striped table-hover">
@@ -15,25 +17,25 @@
 			
 				<tr>
 				
-					<th>Project Name</th>
+					<th>{{ sort_table_by('projects', 'name', 'Project Name') }}</th>
 									
-					<th>Client</th>
+					<th>{{ sort_table_by('projects' , 'clientName', 'Client') }}</th>
 			
-					<th>Contact</th>
+					<th>{{ sort_table_by('projects' , 'contactName', 'Contact') }}</th>
 
-					<th>Start Date</th>
+					<th>{{ sort_table_by('projects', 'start_date', 'Start Date') }}</th>
 					
-					<th>Resource(s)</th>
+					<th>{{ sort_table_by('projects', 'resource', 'Resource(s)') }}</th>
 
-					<th>Current Phase</th>
+					<th>{{ sort_table_by('projects', 'phaseName', 'Current Phase') }}</th>
 
-					<th>% Complete</th>
+					<th>{{ sort_table_by('projects', 'percentage_complete', '% Complete') }}</th>
 					
-					<th>Due Date</th>
+					<th>{{ sort_table_by('projects', 'due_date', 'Due Date') }}</th>
 					
-					<th>Estimate</th>
+					<th>{{ sort_table_by('projects', 'estimate_number', 'Estimate') }}</th>
 					
-					<th>Value (£)</th>
+					<th>{{ sort_table_by('projects', 'value', 'Value (£)') }}</th>
 			
 				</tr>
 		

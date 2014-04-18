@@ -36,7 +36,7 @@ Event::listen('illuminate.query', function($query)
 Route::get('/', function()
 {
 
-	return Redirect::to('/clients');
+	return Redirect::to('/projects');
 
 });
 
@@ -50,9 +50,11 @@ Route::get('/', function()
 |
 */
 
-Route::get('projects/complete','ProjectsController@showComplete');
+Route::get('projects/complete', array('as' => 'projects/completed', 'uses' => 'ProjectsController@showComplete'));
 
-Route::get('/projects/pipeline','ProjectsController@showPipeline');
+Route::get('/projects/pipeline', array('as' => 'projects/pipeline', 'uses' => 'ProjectsController@showPipeline'));
+
+Route::get('projects', array('as' => 'projects', 'uses' => 'ProjectsController@index'));
 
 Route::resource('projects','ProjectsController');
 
@@ -68,6 +70,8 @@ Route::resource('projects','ProjectsController');
 |
 */
 
+Route::get('clients', array('as' => 'clients', 'uses' => 'ClientsController@index'));
+
 Route::resource('clients','ClientsController');
 
 
@@ -82,6 +86,7 @@ Route::resource('clients','ClientsController');
 
 /* Route::post('/contacts', 'ContactsController@store'); */
 
+Route::get('contacts', array('as' => 'contacts', 'uses' => 'ContactsController@index'));
 
 Route::resource('contacts','ContactsController');
 

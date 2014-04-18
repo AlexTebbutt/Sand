@@ -229,6 +229,28 @@ London, W11 2AT',
 				'created_at' => '2014-04-09 14:20:40',
 				'updated_at' => '2014-04-09 14:20:40',
 			),
+			19 => 
+			array (
+				'id' => 20,
+				'name' => 'Fox Collective',
+				'address' => '',
+				'post_code' => '',
+				'main_phone' => '',
+				'importance' => 0,
+				'created_at' => '2014-04-11 12:13:11',
+				'updated_at' => '2014-04-11 12:13:11',
+			),
+			20 => 
+			array (
+				'id' => 21,
+				'name' => 'INITIALS Marketing',
+				'address' => '',
+				'post_code' => '',
+				'main_phone' => '020 7747 7400',
+				'importance' => 0,
+				'created_at' => '2014-04-16 15:34:01',
+				'updated_at' => '2014-04-16 15:34:01',
+			),
 		));
 	}
 

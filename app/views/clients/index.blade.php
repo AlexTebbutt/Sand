@@ -15,8 +15,8 @@
 			<thead>
 			
 				<tr>
-			
-					<th>Name</th>
+
+					<th>{{ sort_table_by('clients', 'name', 'Name') }}</th>		
 				
 					<th>Address</th>
 				

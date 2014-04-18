@@ -9,8 +9,10 @@ class ClientsController extends \BaseController {
 	 */
 	public function index()
 	{
-		
-		$clients = Client::orderBy('name')->get();
+	
+		$sortBy = (!is_null(Request::get('sortBy')) ? Request::get('sortBy') : 'name');
+		$direction = (!is_null(Request::get('direction')) ? Request::get('direction') : 'ASC');
+		$clients = Client::orderBy($sortBy, $direction)->get();
 		
 		return View::make('clients.index', compact('clients'));
 		

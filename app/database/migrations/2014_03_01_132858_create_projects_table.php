@@ -18,9 +18,9 @@ class CreateProjectsTable extends Migration {
 			$table->integer('client_id');
 			$table->integer('contact_id');
 			$table->string('name');
-			$table->dateTime('start_date')->nullable();			
-			$table->dateTime('due_date')->nullable();
-			$table->dateTime('golive_date')->nullable();
+			$table->date('start_date')->nullable();			
+			$table->date('due_date')->nullable();
+			$table->date('golive_date')->nullable();
 			$table->integer('likelihood')->nullable();
 			$table->string('resource')->nullable();
 			$table->integer('phase_id');
@@ -31,7 +31,7 @@ class CreateProjectsTable extends Migration {
 			$table->decimal('value', 9, 2)->nullable();
 			$table->integer('estimated_development_time')->nullable();
 			$table->integer('actual_development_time')->nullable();
-			$table->dateTime('completed_date')->nullable();
+			$table->date('completed_date')->nullable();
 			$table->timestamps();
 		});
 	}
