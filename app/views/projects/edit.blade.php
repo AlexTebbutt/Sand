@@ -15,7 +15,7 @@
 
 		{{ Form::model($project, ['method' => 'PATCH', 'route' => ['projects.update', $project->id], 'class' => 'form']) }}
 
-			@include('projects/partials/_form', ['submitText' => 'Update Project'])
+			@include('projects/partials/_form', ['submitText' => 'Update Project', 'deleteButton' => TRUE, 'duplicateButton' => TRUE])
 		
 		{{ Form::close() }}
 

@@ -50,9 +50,13 @@ Route::get('/', function()
 |
 */
 
-Route::get('projects/complete', array('as' => 'projects/completed', 'uses' => 'ProjectsController@showComplete'));
+Route::get('/projects/complete', array('as' => 'projects/completed', 'uses' => 'ProjectsController@showComplete'));
 
 Route::get('/projects/pipeline', array('as' => 'projects/pipeline', 'uses' => 'ProjectsController@showPipeline'));
+
+Route::get('/projects/delete/{id}','ProjectsController@deleteProject');
+
+Route::get('/projects/duplicate/{id}', 'ProjectsController@duplicateProject');
 
 Route::get('projects', array('as' => 'projects', 'uses' => 'ProjectsController@index'));
 

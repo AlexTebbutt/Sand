@@ -244,12 +244,24 @@
 	<div class="col-md-6">
 	
 		{{ Form::submit(isset($submitText) ? $submitText : 'Create Project', ['class' => 'btn btn-primary']) }}
+
+		@if(isset($duplicateButton))
+			
+			{{ link_to('projects/duplicate/' . $project->id, 'Duplicate Project', ['class' => 'btn btn-success']) }}
+			
+		@endif
+		
+		@if(isset($deleteButton))
+			
+			{{ link_to('projects/delete/' . $project->id, 'Delete Project', ['class' => 'btn btn-danger']) }}
+			
+		@endif
 	
 	</div>
 	
 	<div class="col-md-6 text-right">
 		
-		{{ link_to(URL::previous(), 'Back') }}
+		{{ link_to(URL::previous(), 'Back', ['class' => 'btn btn-default']) }}
 		
 	</div>
 	

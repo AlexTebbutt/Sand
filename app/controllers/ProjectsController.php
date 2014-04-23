@@ -125,7 +125,11 @@ class ProjectsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		
+		Project::destroy($id);
+		
+		return Redirect::to(check_redirect('projects'));
+		
 	}
 	
 	
@@ -186,7 +190,28 @@ class ProjectsController extends \BaseController {
 		return View::make('projects.pipeline', compact('projects', 'details'));
 		
 	}
+	
+	
+	public function deleteProject($id)
+	{
 		
+		$project = Project::findOrFail($id);
+		
+		return View::make('projects.delete', compact('project'));	
+			
+	}
+
+
+	public function duplicateProject($id)
+	{
+		
+		$project = Project::findOrFail($id);
+		$newProject = $project->replicate();
+		$newProject->save();
+		
+ 		return Redirect::to('projects/' . $newProject->id . '/edit');
+			
+	}		
 	
 	
 
