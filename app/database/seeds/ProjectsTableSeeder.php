@@ -129,29 +129,6 @@ class ProjectsTableSeeder extends Seeder {
 			),
 			5 => 
 			array (
-				'id' => 6,
-				'client_id' => 4,
-				'contact_id' => 6,
-				'name' => 'Virgin Money - Extramile',
-				'start_date' => NULL,
-				'due_date' => NULL,
-				'golive_date' => NULL,
-				'likelihood' => NULL,
-			'resource' => 'Pete (FE), Julian (BE)',
-				'phase_id' => 5,
-				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
-				'estimate_phase' => NULL,
-				'value' => NULL,
-				'estimated_development_time' => NULL,
-				'actual_development_time' => NULL,
-				'completed_date' => NULL,
-				'created_at' => '2014-04-09 14:10:47',
-				'updated_at' => '2014-04-12 07:37:33',
-			),
-			6 => 
-			array (
 				'id' => 7,
 				'client_id' => 7,
 				'contact_id' => 10,
@@ -163,17 +140,17 @@ class ProjectsTableSeeder extends Seeder {
 				'resource' => NULL,
 				'phase_id' => 4,
 				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
+				'estimate_number' => '811',
+				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/429175',
 				'estimate_phase' => NULL,
 				'value' => '22752.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:11:01',
-				'updated_at' => '2014-04-17 15:08:33',
+				'updated_at' => '2014-04-23 14:08:40',
 			),
-			7 => 
+			6 => 
 			array (
 				'id' => 8,
 				'client_id' => 8,
@@ -185,18 +162,18 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 			'resource' => 'Anh (Design), Pete (FE), Simon (BE)',
 				'phase_id' => 4,
-				'percentage_complete' => 10,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
+				'percentage_complete' => 0,
+				'estimate_number' => '815',
+				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/432782',
 				'estimate_phase' => NULL,
-				'value' => NULL,
+				'value' => '20736.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:31:11',
-				'updated_at' => '2014-04-17 10:34:47',
+				'updated_at' => '2014-04-23 14:06:52',
 			),
-			8 => 
+			7 => 
 			array (
 				'id' => 9,
 				'client_id' => 14,
@@ -208,18 +185,18 @@ class ProjectsTableSeeder extends Seeder {
 				'likelihood' => NULL,
 			'resource' => 'Pete (FE), Simon (BE)',
 				'phase_id' => 5,
-				'percentage_complete' => 80,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
+				'percentage_complete' => 0,
+				'estimate_number' => '851',
+				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/506997',
 				'estimate_phase' => NULL,
-				'value' => NULL,
+				'value' => '8760.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:31:45',
-				'updated_at' => '2014-04-10 13:27:59',
+				'updated_at' => '2014-04-23 14:04:35',
 			),
-			9 => 
+			8 => 
 			array (
 				'id' => 10,
 				'client_id' => 3,
@@ -242,7 +219,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:32:25',
 				'updated_at' => '2014-04-22 12:40:47',
 			),
-			10 => 
+			9 => 
 			array (
 				'id' => 11,
 				'client_id' => 3,
@@ -255,17 +232,17 @@ class ProjectsTableSeeder extends Seeder {
 			'resource' => 'Simon (BE), Danny',
 				'phase_id' => 5,
 				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
+				'estimate_number' => '863',
+				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/527431',
 				'estimate_phase' => NULL,
 				'value' => '480.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:33:05',
-				'updated_at' => '2014-04-17 15:07:08',
+				'updated_at' => '2014-04-23 14:10:32',
 			),
-			11 => 
+			10 => 
 			array (
 				'id' => 12,
 				'client_id' => 12,
@@ -278,17 +255,17 @@ class ProjectsTableSeeder extends Seeder {
 			'resource' => 'Pete (FE), Julian (BE)',
 				'phase_id' => 5,
 				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
+				'estimate_number' => '787',
+				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/400375',
 				'estimate_phase' => NULL,
 				'value' => '11088.00',
 				'estimated_development_time' => NULL,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 14:35:00',
-				'updated_at' => '2014-04-17 15:37:09',
+				'updated_at' => '2014-04-23 14:06:21',
 			),
-			12 => 
+			11 => 
 			array (
 				'id' => 13,
 				'client_id' => 11,
@@ -311,7 +288,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:36:01',
 				'updated_at' => '2014-04-22 08:22:52',
 			),
-			13 => 
+			12 => 
 			array (
 				'id' => 14,
 				'client_id' => 6,
@@ -334,7 +311,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:38:28',
 				'updated_at' => '2014-04-11 13:06:33',
 			),
-			14 => 
+			13 => 
 			array (
 				'id' => 15,
 				'client_id' => 10,
@@ -357,7 +334,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:53:27',
 				'updated_at' => '2014-04-09 14:53:27',
 			),
-			15 => 
+			14 => 
 			array (
 				'id' => 17,
 				'client_id' => 11,
@@ -380,7 +357,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:57:53',
 				'updated_at' => '2014-04-09 14:57:53',
 			),
-			16 => 
+			15 => 
 			array (
 				'id' => 18,
 				'client_id' => 11,
@@ -403,7 +380,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:58:09',
 				'updated_at' => '2014-04-09 14:58:09',
 			),
-			17 => 
+			16 => 
 			array (
 				'id' => 19,
 				'client_id' => 11,
@@ -426,7 +403,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:58:34',
 				'updated_at' => '2014-04-09 14:58:34',
 			),
-			18 => 
+			17 => 
 			array (
 				'id' => 20,
 				'client_id' => 11,
@@ -449,7 +426,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:58:56',
 				'updated_at' => '2014-04-09 14:58:56',
 			),
-			19 => 
+			18 => 
 			array (
 				'id' => 22,
 				'client_id' => 11,
@@ -472,30 +449,30 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 14:59:55',
 				'updated_at' => '2014-04-09 14:59:55',
 			),
-			20 => 
+			19 => 
 			array (
 				'id' => 23,
 				'client_id' => 4,
 				'contact_id' => 6,
-				'name' => 'Extramile YouTube',
+				'name' => 'Virgin Money Extramile YouTube',
 				'start_date' => NULL,
 				'due_date' => NULL,
 				'golive_date' => NULL,
 				'likelihood' => 100,
-				'resource' => NULL,
+			'resource' => 'Pete (FE), Julian (BE)',
 				'phase_id' => 7,
 				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
+				'estimate_number' => '888',
+				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/549127',
 				'estimate_phase' => NULL,
 				'value' => '6336.00',
 				'estimated_development_time' => 40,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-09 15:01:10',
-				'updated_at' => '2014-04-10 13:29:32',
+				'updated_at' => '2014-04-23 14:11:55',
 			),
-			21 => 
+			20 => 
 			array (
 				'id' => 24,
 				'client_id' => 1,
@@ -518,7 +495,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:04:41',
 				'updated_at' => '2014-04-09 15:04:41',
 			),
-			22 => 
+			21 => 
 			array (
 				'id' => 25,
 				'client_id' => 12,
@@ -541,7 +518,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:05:22',
 				'updated_at' => '2014-04-09 15:05:22',
 			),
-			23 => 
+			22 => 
 			array (
 				'id' => 26,
 				'client_id' => 13,
@@ -564,7 +541,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:06:12',
 				'updated_at' => '2014-04-09 15:06:12',
 			),
-			24 => 
+			23 => 
 			array (
 				'id' => 27,
 				'client_id' => 2,
@@ -587,7 +564,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:06:45',
 				'updated_at' => '2014-04-10 13:42:47',
 			),
-			25 => 
+			24 => 
 			array (
 				'id' => 28,
 				'client_id' => 16,
@@ -610,7 +587,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-09 15:08:30',
 				'updated_at' => '2014-04-09 15:08:30',
 			),
-			26 => 
+			25 => 
 			array (
 				'id' => 29,
 				'client_id' => 5,
@@ -633,7 +610,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:24:22',
 				'updated_at' => '2014-04-10 09:24:22',
 			),
-			27 => 
+			26 => 
 			array (
 				'id' => 30,
 				'client_id' => 3,
@@ -656,7 +633,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:26:24',
 				'updated_at' => '2014-04-22 08:24:51',
 			),
-			28 => 
+			27 => 
 			array (
 				'id' => 31,
 				'client_id' => 17,
@@ -679,7 +656,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:26:56',
 				'updated_at' => '2014-04-10 09:26:56',
 			),
-			29 => 
+			28 => 
 			array (
 				'id' => 32,
 				'client_id' => 2,
@@ -702,7 +679,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:27:38',
 				'updated_at' => '2014-04-10 09:27:38',
 			),
-			30 => 
+			29 => 
 			array (
 				'id' => 33,
 				'client_id' => 11,
@@ -725,7 +702,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:28:03',
 				'updated_at' => '2014-04-10 09:30:46',
 			),
-			31 => 
+			30 => 
 			array (
 				'id' => 34,
 				'client_id' => 19,
@@ -738,17 +715,17 @@ class ProjectsTableSeeder extends Seeder {
 			'resource' => 'Pete (FE), Simon (BE), Anh',
 				'phase_id' => 3,
 				'percentage_complete' => 0,
-				'estimate_number' => NULL,
-				'estimate_link' => NULL,
+				'estimate_number' => '898',
+				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/559220',
 				'estimate_phase' => NULL,
-				'value' => '10980.00',
+				'value' => '13176.00',
 				'estimated_development_time' => 160,
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-10 09:29:23',
-				'updated_at' => '2014-04-17 10:31:51',
+				'updated_at' => '2014-04-23 14:09:27',
 			),
-			32 => 
+			31 => 
 			array (
 				'id' => 35,
 				'client_id' => 18,
@@ -771,7 +748,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 09:29:53',
 				'updated_at' => '2014-04-10 09:29:53',
 			),
-			33 => 
+			32 => 
 			array (
 				'id' => 36,
 				'client_id' => 20,
@@ -794,7 +771,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-10 12:38:45',
 				'updated_at' => '2014-04-17 15:13:22',
 			),
-			34 => 
+			33 => 
 			array (
 				'id' => 38,
 				'client_id' => 1,
@@ -817,7 +794,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-16 15:32:55',
 				'updated_at' => '2014-04-16 15:32:55',
 			),
-			35 => 
+			34 => 
 			array (
 				'id' => 39,
 				'client_id' => 21,
@@ -840,7 +817,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-16 15:33:29',
 				'updated_at' => '2014-04-17 15:13:01',
 			),
-			36 => 
+			35 => 
 			array (
 				'id' => 40,
 				'client_id' => 5,
@@ -851,7 +828,7 @@ class ProjectsTableSeeder extends Seeder {
 				'golive_date' => '2014-05-02',
 				'likelihood' => 50,
 			'resource' => 'Simon (BE)',
-				'phase_id' => 1,
+				'phase_id' => 2,
 				'percentage_complete' => 0,
 				'estimate_number' => '905',
 				'estimate_link' => 'https://diginutltd.freeagent.com/estimates/571582',
@@ -861,9 +838,9 @@ class ProjectsTableSeeder extends Seeder {
 				'actual_development_time' => NULL,
 				'completed_date' => NULL,
 				'created_at' => '2014-04-22 09:52:42',
-				'updated_at' => '2014-04-22 10:07:55',
+				'updated_at' => '2014-04-23 11:31:59',
 			),
-			37 => 
+			36 => 
 			array (
 				'id' => 41,
 				'client_id' => 3,
@@ -886,7 +863,7 @@ class ProjectsTableSeeder extends Seeder {
 				'created_at' => '2014-04-22 11:04:04',
 				'updated_at' => '2014-04-22 12:41:01',
 			),
-			38 => 
+			37 => 
 			array (
 				'id' => 42,
 				'client_id' => 3,

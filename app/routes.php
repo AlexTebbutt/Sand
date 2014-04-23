@@ -41,6 +41,16 @@ Route::get('/', function()
 });
 
 
+Route::get('/login', function()
+{
+
+	return View::make('home.login');
+
+
+});
+
+Route::get('/auth', array('as' => 'auth'));
+
 /*
 |--------------------------------------------------------------------------
 | Projects
