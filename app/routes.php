@@ -32,24 +32,43 @@ Event::listen('illuminate.query', function($query)
 
 
 //Home
+Route::get('/', ['as' => 'home', 'uses' => function()
+{
 
+	return Redirect::to('projects');
+
+}]);
+
+/*
+|--------------------------------------------------------------------------
+| Session Routes
+|--------------------------------------------------------------------------
+|
+| User authenticatio, login / logout etc.
+|
+*/
+
+Route::get('login', ['as' => 'login', 'uses' => 'SessionsController@create']);
+
+Route::get('logout', 'SessionsController@destroy');
+
+Route::resource('sessions','SessionsController', ['only' => ['create','destroy','store']]);
+
+
+/*
 Route::get('/', function()
 {
 
 	return Redirect::to('/projects');
 
 });
+*/
 
 
-Route::get('/login', function()
+
+Route::group(['before' => 'auth'], function()
 {
 
-	return View::make('home.login');
-
-
-});
-
-Route::get('/auth', array('as' => 'auth'));
 
 /*
 |--------------------------------------------------------------------------
@@ -68,7 +87,7 @@ Route::get('/projects/delete/{id}','ProjectsController@deleteProject');
 
 Route::get('/projects/duplicate/{id}', 'ProjectsController@duplicateProject');
 
-Route::get('projects', array('as' => 'projects', 'uses' => 'ProjectsController@index'));
+Route::get('projects', array('as' => 'projects', 'uses' => 'ProjectsController@index'))->before('auth');
 
 Route::resource('projects','ProjectsController');
 
@@ -175,6 +194,8 @@ Route::get('users', function()
 {
 
 	Return 'Show all users';
+
+});
 
 });
 

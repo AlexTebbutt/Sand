@@ -1,6 +1,6 @@
 <?php
 
-class Phase extends Basemodel {
+class Projectphase extends Basemodel {
 
 	protected $guarded = ['id'];
 	

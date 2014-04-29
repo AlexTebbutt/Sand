@@ -1,6 +1,6 @@
 <?php
 
-class Client extends BaseModel {
+class Paymentphase extends Basemodel {
 
 	protected $guarded = ['id'];
 	
@@ -8,11 +8,10 @@ class Client extends BaseModel {
 		'name' => 'required'
 	];
 
-
-	public function contacts()
+	public function project()
 	{
 		
-		return $this->hasMany('Contact');
+		return $this->hasMany('Project');
 		
 	}
 

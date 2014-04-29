@@ -47,9 +47,9 @@
 
 					<td>{{ link_to_route('projects.edit', $project->name, $project->id) }}</td>
 					
-					<td>{{ $project->client->name }}</td>
+					<td>{{ $project->clientName }}</td>
 			
-					<td>{{ $project->contact->name }}</td>
+					<td>{{ $project->contactName }}</td>
 
 					<td>{{ $project->start_date }}</td>
 					

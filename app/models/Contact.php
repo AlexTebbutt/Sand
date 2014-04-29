@@ -1,6 +1,6 @@
 <?php
 
-class Contact extends Basemodel {
+class Contact extends BaseModel {
 
 	protected $guarded = ['id', 'created_at', 'updated_at'];
 	

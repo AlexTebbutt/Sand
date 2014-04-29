@@ -27,7 +27,7 @@
 					
 					<th>{{ sort_table_by('projects', 'resource', 'Resource(s)') }}</th>
 
-					<th>{{ sort_table_by('projects', 'phaseName', 'Current Phase') }}</th>
+					<th>{{ sort_table_by('projects', 'projectPhaseName', 'Current Phase') }}</th>
 
 					<th>{{ sort_table_by('projects', 'percentage_complete', '% Complete') }}</th>
 					
@@ -47,15 +47,15 @@
 
 					<td>{{ link_to_route('projects.edit', $project->name, $project->id) }}</td>
 					
-					<td>{{ $project->client->name }}</td>
+					<td>{{ $project->clientName }}</td>
 			
-					<td>{{ $project->contact->name }}</td>
+					<td>{{ $project->contactName }}</td>
 
 					<td>{{ $project->start_date }}</td>
 					
 					<td>{{ $project->resource }}</td>
 
-					<td>{{ $project->phase->name }}</td>
+					<td>{{ $project->projectPhaseName }}</td>
 
 					<td>{{ $project->percentage_complete }}</td>
 					

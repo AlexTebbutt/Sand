@@ -1,6 +1,6 @@
 <?php
 
-class Project extends Basemodel {
+class Project extends BaseModel {
 
 	protected $guarded = ['id', 'created_at', 'updated_at'];
 	
@@ -24,31 +24,38 @@ class Project extends Basemodel {
 		
 	}
 	
-	public function phase()
+	public function projectphase()
 	{
 		
-		return $this->belongsTo('Phase');
+		return $this->belongsTo('Projectphase');
+		
+	}
+
+	public function paymentphase()
+	{
+		
+		return $this->belongsTo('Paymentphase');
 		
 	}
 	
 	public static function whereCurrent()
 	{
 		
-		return self::where('phase_id', '>', '1')->where('phase_id', '<', '8');
+		return self::where('projectphase_id', '>', '1')->where('projectphase_id', '<', '8');
 		
 	}
 
 	public static function wherePipeline()
 	{
 		
-		return self::where('phase_id', '1');
+		return self::where('projectphase_id', '1');
 		
 	}
 	
 	public static function whereComplete()
 	{
 		
-		return self::where('phase_id', '8');
+		return self::where('projectphase_id', '8');
 		
 	}	
 	
@@ -75,12 +82,14 @@ class Project extends Basemodel {
       $this->attributes['start_date'] = Carbon::createFromFormat('d/m/Y', $value)->toDateString();
   }
   
-/*
   public function setValueAttribute($value)
   {
-		  $this->attributes['value'] = floatval($value);
+
+		  /* $this->attributes['value'] = floatval(str_replace(',', '.', str_replace('.', '', $value))); */
+
+			$this->attributes['value'] = floatval(preg_replace('/[^\d.]/', '', $value));
+			
 	}
-*/
 
 
 	/* Date Accessors to get format correctly for display */
@@ -125,17 +134,15 @@ class Project extends Basemodel {
 
   }    
   
-/*
   public function getValueAttribute($value)
   {
 	  
 	  if ($value !== NULL)
 	  {
-		  return number_format($value, 2);
+		  return number_format($value, 2, '.', ',');
 	  }
 	  
   }
-*/
   	
 
 }

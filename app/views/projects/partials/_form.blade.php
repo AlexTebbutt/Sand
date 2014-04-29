@@ -95,9 +95,9 @@
 						
 						<div class="form-group col-md-2">
 						
-							{{ Form::label('phase_id', 'Current Phase') }}
+							{{ Form::label('projectphase_id', 'Current Phase') }}
 						
-							{{ Form::select('phase_id', $phases, null, ['class' => 'form-control']) }}
+							{{ Form::select('projectphase_id', $projectphases, null, ['class' => 'form-control']) }}
 						
 						</div>		
 			

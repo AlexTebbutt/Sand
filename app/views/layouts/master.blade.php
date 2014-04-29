@@ -24,6 +24,8 @@
 	
 		<div class="container">
 	
+			@if(Auth::check())
+			
 			<header>
 			
 				@include('layouts.partials.nav')
@@ -31,7 +33,9 @@
 				@yield('secondary nav')
 			
 			</header>
-	
+			
+			@endif
+			
 			@yield('content')
 			
 		</div>

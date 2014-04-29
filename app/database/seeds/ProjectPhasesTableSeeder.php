@@ -1,6 +1,6 @@
 <?php
 
-class PhasesTableSeeder extends Seeder {
+class ProjectphasesTableSeeder extends Seeder {
 
 	/**
 	 * Auto generated seed file
@@ -9,9 +9,9 @@ class PhasesTableSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		\DB::table('phases')->truncate();
+		\DB::table('projectphases')->truncate();
         
-		\DB::table('phases')->insert(array (
+		\DB::table('projectphases')->insert(array (
 			0 => 
 			array (
 				'id' => 1,

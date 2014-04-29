@@ -14,13 +14,13 @@
 
     </button>
 
-    <a class="navbar-brand" href="/">SAND: Beta</a>
+    <a class="navbar-brand" href="/">SAND: Alpha</a>
 
   </div>
 
 	<div class="collapse navbar-collapse" id="navbar-collapse=1">
 	
-		<ul class="nav navbar-nav">
+		<ul class="nav navbar-nav navbar-left">
 		
 			<li class="dropdown">
 			
@@ -71,6 +71,11 @@
 			</li>	
 			
 		</ul>
+		
+		
+		<p class="navbar-right navbar-text"><a class="navbar-link" href="/logout">Logout</a></p>
+
+		<p class="navbar-right navbar-text">Welcome <a href="/user/{{ Auth::user()->id }}">{{ Auth::user()->username }}</a></p>
 
 	</div>
 	

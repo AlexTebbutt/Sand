@@ -144,6 +144,8 @@
 			
 		}
 		
+		$total = number_format($total, 2, '.', ',');
+		
 		$description = str_replace('#', $count, $description);
 		$description = str_replace('x.xx', $total, $description);
 		
