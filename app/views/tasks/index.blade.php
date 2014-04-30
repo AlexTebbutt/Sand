@@ -15,15 +15,9 @@
 		
 			<li class="list-group-item">
 				
-				<a href="/{{ $task->user->username }}/tasks"><img src="{{ gravatar_url($task->user->email) }}" alt="{{ $task->user->email }}" width="60" ></a>
-			
+				<a href="/{{ $task->user->username }}/tasks"><img src="{{ gravatar_url($task->user->email) }}" alt="{{ $task->user->email }}" width="40" ></a>
+
 				{{ link_to_task($task) }}
-				
-				{{ Form::open(['method' => 'PATCH', 'route' => ['task.update']]) }}
-				
-					{{ Form::checkbox('completed') }}				
-				
-				{{ Form::close() }}
 				
 			</li>
 		
@@ -36,12 +30,12 @@
   <div class="col-md-6">
 
 		<h2>Add New Task</h3>
-		
-		@if (isset($users))
-			
+
+		{{ Form::open(['url' => '/tasks', 'class' => 'form']) }}
+
 			@include('/tasks/partials/addtask')
-		
-		@endif	  
+
+		{{ Form::close() }}
 	  
   </div>
 

@@ -10,7 +10,7 @@
 
 </article>
 
-<p>{{ link_to('/tasks', 'All Tasks') }}</p>
+<p>{{ link_to('/tasks', 'Back') }}</p>
 
 <h3>Add a task</h3>
 

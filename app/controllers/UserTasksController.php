@@ -10,9 +10,18 @@ class UserTasksController extends \BaseController {
 	public function index($username)
 	{
 		
+		$tasks = User::byUsername($username)->tasks;
+		$users = User::lists('username', 'id');
+				
+		return View::make('tasks.usertasks', compact('tasks', 'users'));
+
+
+
+/*
 		$tasks = Task::byUsername($username);
 		
 		return View::make('tasks.usertasks', compact('tasks'));
+*/
 		
 	}
 
@@ -46,9 +55,10 @@ class UserTasksController extends \BaseController {
 	{
 		
 		//Show specific task related to user
-		$task = Task::find($taskID, $username);
+		$task = User::byUsername($username)->tasks()->findOrFail($taskID);
+		$users = User::lists('username', 'id');
 		
-		return View::make('tasks.show', compact('task'));
+		return View::make('tasks.show', compact('task', 'users'));
 		
 	}
 
@@ -58,9 +68,15 @@ class UserTasksController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($username, $taskID)
 	{
-		//
+
+		//Show specific task related to user
+		$task = User::byUsername($username)->tasks()->findOrFail($taskID);
+		$users = User::lists('username', 'id');
+		
+		return View::make('tasks.edit', compact('task', 'users'));	
+		
 	}
 
 	/**

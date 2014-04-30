@@ -1,4 +1,4 @@
-@extends('layouts.masters.projects')
+@extends('layouts.master')
 
 @section('content')
 
@@ -6,11 +6,11 @@
 
 	<div class="col-md-12">
 	
-		<h1>Delete {{ $project->name }}</h1>
+		<h1>Delete {{ $task->title }}</h1>
 
-		{{ Form::open(['method' => 'DELETE', 'url' => 'projects/' . $project->id, 'class' => 'form']) }}
+		{{ Form::open(['method' => 'DELETE', 'url' => 'tasks/' . $task->id, 'class' => 'form']) }}
 
-			<p>Are you sure you want to delete {{ $project->name }}?</p>
+			<p>Are you sure you want to delete {{ $task->title }}?</p>
 			
 			{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
 			

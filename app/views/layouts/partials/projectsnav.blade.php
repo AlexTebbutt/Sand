@@ -20,6 +20,12 @@
 						
 		</li>	
 
+		<li {{ set_active('projects/onhold') }}>
+
+			<a href="/projects/onhold">Projects On Hold</a>			
+						
+		</li>	
+
 		<li {{ set_active('projects/create') }}>
 
 			<a href="/projects/create">Create New Project</a>			

@@ -1,41 +1,44 @@
 @extends('layouts.master')
 
 @section('content')
-	
-<h1>All Tasks</h1>
 
-<ul class="list-group">
+<div class="row">
 
-@foreach($users as $user)
+  <div class="col-md-6">
 
-	<li class="list-group-item">
-	
-		<h2>{{ $user->username }}</h2>
-	
-		<ul class="list-group">	
-	
-		@foreach($user->tasks as $task)
+		<h2>Tasks</h1>
+		
+		<ul class="list-group">
+		
+		@foreach($tasks as $task)
 		
 			<li class="list-group-item">
 				
-				<a href="/{{ $task->user->username }}/tasks"><img src="{{ gravatar_url($task->user->email) }}" alt="{{ $task->user->email }}" width="60" ></a>
-			
-				{{ link_to('tasks/' . $task->id, $task->title) }}
+				<a href="/{{ $task->user->username }}/tasks">&nbsp;<img src="{{ gravatar_url($task->user->email) }}" alt="{{ $task->user->email }}" width="40" ></a>
+
+				{{ link_to_task($task) }}
 				
 			</li>
 		
 		@endforeach
-	
-		</ul>
 		
-	</li>
-	
-@endforeach
+		</ul>
 
-</ul>
+  </div>
 
-<h3>Add A Task</h3>
+  <div class="col-md-6">
 
-@include('tasks/partials/addtask')
+		<h2>Add New Task</h3>
+
+
+		{{ Form::open(['url' => '/tasks', 'class' => 'form']) }}
+
+			@include('/tasks/partials/addtask', ['backButton' => TRUE])
+
+		{{ Form::close() }}
+	  
+  </div>
+
+</div>	
 
 @stop

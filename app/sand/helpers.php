@@ -23,7 +23,7 @@
 	function link_to_task(Task $task)
 	{
 		
-		return link_to_route('user.tasks.show', $task->title, [$task->user->username, $task->id]);
+		return link_to_route('user.tasks.edit', $task->title, [$task->user->username, $task->id]);
 		
 	}
 
@@ -120,7 +120,15 @@
 		return link_to_route($uri, $label, ['sortBy' => $column, 'direction' => $direction]);
 	
 	}
-	
+
+
+	/**
+	 * Fill in the details for the project summary
+	 *
+	 * @param  str  $description, str $type
+	 * @return String with project count and summed total filled in
+	 */
+	 
 	function build_projects_summary($description, $type = 'complete')
 	{
 		
@@ -154,5 +162,18 @@
 	}
 	
 	
+	/**
+	 * Create a bar graph from the given value ( 0 - 100 )
+	 *
+	 * @param  str  $percentage
+	 * @return Div with width set to percentage
+	 */
+	
+	function show_percentage_as_bar($percentage = 100)
+	{
+		
+		return '<div class="bar"><div style="width: ' . $percentage . '%; background-color: rgb(150,150,150);">&nbsp;</div';
+		
+	}
 
 ?>

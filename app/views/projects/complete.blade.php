@@ -25,7 +25,7 @@
 
 					<th>{{ sort_table_by('projects/completed', 'completed_date', 'Date Completed') }}</th>					
 
-					<th>{{ sort_table_by('projects/completed', 'estimate_number', 'Estimate') }}</th>					
+					<th>{{ sort_table_by('projects/completed', 'invoice_number', 'Invoice') }}</th>					
 
 					<th>{{ sort_table_by('projects/completed', 'estimated_development_time', 'Estimated Dev Time (H)') }}</th>					
 
@@ -49,7 +49,7 @@
 					
 					<td>{{ $project->completed_date }}</td>
 					
-					<td>{{ create_external_link($project->estimate_link, $project->estimate_number) }}</td>
+					<td>{{ create_external_link($project->invoice_link, $project->invoice_number) }}</td>
 					
 					<td>{{ $project->estimated_development_time }}</td>
 					

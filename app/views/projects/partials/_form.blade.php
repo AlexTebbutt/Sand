@@ -121,7 +121,7 @@
 						
 							{{ Form::label('percentage_complete', '% Complete') }}
 						
-							{{ Form::text('percentage_complete', 0, ['class' => 'form-control']) }}
+							{{ Form::text('percentage_complete', NULL, ['class' => 'form-control']) }}
 						
 						</div>				
 
@@ -141,50 +141,82 @@
 		
 					<div class="panel-heading">
 
-						<h2 class="panel-title">Estimate Information</h2>
+						<h2 class="panel-title">Financial Information</h2>
 						
 					</div>
 					
 					<div class="panel-body">
-			
-						<div class="form-group col-md-1">
-						
-							{{ Form::label('estimate_number', 'Number') }}
-						
-							{{ Form::text('estimate_number', NULL, ['class' => 'form-control']) }}
-						
+					
+						<div class="row">
+
+							<div class="col-md-12">
+							
+								<div class="form-group col-md-3">
+							
+									{{ Form::label('paymentphase_id', 'Payment Phase') }}
+									
+									{{ Form::select('paymentphase_id', $paymentphases, null, ['class' => 'form-control']) }}
+
+								</div>
+							
+								<div class="form-group col-md-2">
+								
+									{{ Form::label('estimated_development_time', 'Est. Dev Time (H)') }}
+								
+									{{ Form::text('estimated_development_time', NULL, ['class' => 'form-control']) }}
+								
+								</div>
+
+								<div class="form-group col-md-2">
+								
+									{{ Form::label('value', 'Value (£)') }}
+								
+									{{ Form::text('value', NULL, ['class' => 'form-control']) }}
+								
+								</div>								
+								
+							</div>
+							
 						</div>
-						
-						<div class="form-group col-md-3">
-						
-							{{ Form::label('estimate_link', 'Link') }}
-						
-							{{ Form::text('estimate_link', NULL, ['class' => 'form-control']) }}
-						
-						</div>
-						
-						<div class="form-group col-md-2">
-						
-							{{ Form::label('estimate_phase', 'Phase') }}
-						
-							{{ Form::text('estimate_phase', NULL, ['class' => 'form-control']) }}
-						
-						</div>
-						
-						<div class="form-group col-md-2">
-						
-							{{ Form::label('value', 'Value (£)') }}
-						
-							{{ Form::text('value', NULL, ['class' => 'form-control']) }}
-						
-						</div>
-						
-						<div class="form-group col-md-2">
-						
-							{{ Form::label('estimated_development_time', 'Est. Dev Time (H)') }}
-						
-							{{ Form::text('estimated_development_time', NULL, ['class' => 'form-control']) }}
-						
+
+						<div class="row">
+
+							<div class="col-md-12">
+				
+								<div class="form-group col-md-2">
+								
+									{{ Form::label('estimate_number', 'Estimate #') }}
+								
+									{{ Form::text('estimate_number', NULL, ['class' => 'form-control']) }}
+								
+								</div>
+								
+								<div class="form-group col-md-3">
+								
+									{{ Form::label('estimate_link', 'Link') }}
+								
+									{{ Form::text('estimate_link', NULL, ['class' => 'form-control']) }}
+								
+								</div>
+
+								<div class="form-group col-md-2">
+								
+									{{ Form::label('invoice_number', 'Invoice #') }}
+								
+									{{ Form::text('invoice_number', NULL, ['class' => 'form-control']) }}
+								
+								</div>
+								
+								<div class="form-group col-md-3">
+								
+									{{ Form::label('invoice_link', 'Link') }}
+								
+									{{ Form::text('invoice_link', NULL, ['class' => 'form-control']) }}
+								
+								</div>
+
+							</div>
+							
 						</div>
 
 					</div>

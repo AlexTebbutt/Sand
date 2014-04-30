@@ -9,6 +9,7 @@ class TasksController extends BaseController {
 	 */
 	public function index()
 	{
+		
 		//Fetch all tasks
 		$tasks = Task::with('user')->get();
 		$users = User::lists('username','id');
@@ -116,10 +117,11 @@ class TasksController extends BaseController {
 	public function update($id)
 	{
 		//
-		
+		$input = Input::all();
 		$task = Task::find($id);
 		
-		$task->complete = Input::get('complete') ? Input::get('complete') : 0; 
+		/* $task->complete = Input::get('complete') ? Input::get('complete') : 0; */ 
+		$task->fill($input);
 		
 		$task->save();
 		
@@ -135,7 +137,21 @@ class TasksController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		
+		Task::destroy($id);
+		
+		return Redirect::to('tasks');
+		
 	}
+	
+	public function deleteTask($id)
+	{
+
+		$task = Task::find($id);
+
+		return View::make('tasks.delete', compact('task'));	
+			
+	}	
+	
 
 }

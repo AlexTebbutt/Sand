@@ -6,12 +6,10 @@
 
 	<div class="col-md-12">
 
-		<h1>Current Projects</h1>
-		
-		<p>{{ $details->summary }}</p>
+		<h1>Projects On Hold</h1>
 
 <!-- List current -->
-		<table class="table table-striped table-hover">
+		<table class="table table-hover">
 		
 			<thead>
 			
@@ -22,6 +20,8 @@
 					<th>{{ sort_table_by('projects' , 'clientName', 'Client') }}</th>
 			
 					<th>{{ sort_table_by('projects' , 'contactName', 'Contact') }}</th>
+
+					<th>{{ sort_table_by('projects', 'start_date', 'Start Date') }}</th>
 					
 					<th>{{ sort_table_by('projects', 'resource', 'Resource(s)') }}</th>
 
@@ -48,6 +48,8 @@
 					<td>{{ $project->clientName }}</td>
 			
 					<td>{{ $project->contactName }}</td>
+
+					<td>{{ $project->start_date }}</td>
 					
 					<td>{{ $project->resource }}</td>
 

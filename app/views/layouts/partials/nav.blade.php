@@ -46,6 +46,12 @@
 									
 					</li>
 
+					<li>
+			
+						<a href="/projects/onhold">Projects On Hold</a>			
+									
+					</li>
+
 					<li class="divider"></li>
 					
 					<li>
@@ -67,6 +73,12 @@
 			<li {{ set_active('contacts') }}>
 	
 				<a href="/contacts">Contacts</a>			
+				
+			</li>	
+
+			<li {{ set_active('tasks') }}>
+	
+				<a href="/tasks">Tasks</a>			
 				
 			</li>	
 			

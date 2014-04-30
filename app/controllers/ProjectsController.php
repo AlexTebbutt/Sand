@@ -41,7 +41,7 @@ class ProjectsController extends \BaseController {
 		$clients = Client::orderBy('name')->lists('name','id');
 		$contacts = Contact::orderBy('name')->lists('name','id');
 		$projectphases = Projectphase::lists('name','id');
-		$Paymentphases = Paymentphase::lists('name','id');
+		$paymentphases = Paymentphase::lists('name','id');
 
 		return View::make('projects.create', compact('clients', 'contacts', 'projectphases', 'paymentphases'));
 		
@@ -95,8 +95,8 @@ class ProjectsController extends \BaseController {
 		$clients = Client::orderBy('name')->lists('name','id');
 		$contacts = Contact::orderBy('name')->lists('name','id');
 		$projectphases = Projectphase::lists('name','id');
-		$Paymentphases = Paymentphase::lists('name','id');
-				
+		$paymentphases = Paymentphase::lists('name','id');
+
 		return View::make('projects.edit', compact('project','clients', 'contacts', 'projectphases', 'paymentphases'));
 		
 	}
@@ -190,6 +190,26 @@ class ProjectsController extends \BaseController {
 		Session::put('redirect', URL::full());
 		
 		return View::make('projects.pipeline', compact('projects', 'details'));
+		
+	}
+
+	public function showOnHold()
+	{
+
+		$sortBy = (!is_null(Request::get('sortBy')) ? Request::get('sortBy') : 'created_at');
+		$direction = (!is_null(Request::get('direction')) ? Request::get('direction') : 'DESC');
+		//$projects = Project::orderBy($sortBy, $direction)->with('client', 'contact', 'phase')->where('phase_id', '=', '1')->get();
+		
+		$projects = Project::join('clients', 'clients.id', '=', 'projects.client_id')
+     ->join('contacts', 'contacts.id', '=', 'projects.contact_id')
+     ->join('projectphases', 'projectphases.id', '=', 'projects.projectphase_id')
+     ->where('projectphase_id', '=', '9')
+     ->select(array('projects.*','clients.name as clientName','contacts.name as contactName','projectphases.name as projectPhaseName'))
+     ->orderBy($sortBy, $direction)->get(); 
+		
+		Session::put('redirect', URL::full());
+		
+		return View::make('projects.onhold', compact('projects'));
 		
 	}
 	
