@@ -63,7 +63,7 @@
 					
 					<td>{{ $project->estimated_development_time }}</td>
 
-					<td>{{ $project->likelihood }}</td>
+					<td>{{ show_percentage_as_bar('#ff7bda', $project->likelihood) }}</td>
 									
 				</tr>
 			

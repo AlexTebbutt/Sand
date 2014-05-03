@@ -169,10 +169,10 @@
 	 * @return Div with width set to percentage
 	 */
 	
-	function show_percentage_as_bar($percentage = 100)
+	function show_percentage_as_bar($colour, $percentage = 100)
 	{
 		
-		return '<div class="bar"><div style="width: ' . $percentage . '%; background-color: rgb(150,150,150);">&nbsp;</div';
+		return '<div class="bar"><div style="width: ' . $percentage . '%; background-color: ' . $colour . '; opacity: '. (1/(100/($percentage == 0 ? 1 : $percentage))) .';">&nbsp</div';
 		
 	}
 

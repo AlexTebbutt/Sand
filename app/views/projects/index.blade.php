@@ -53,7 +53,7 @@
 
 					<td>{{ $project->projectPhaseName }}</td>
 
-					<td>{{ show_percentage_as_bar($project->percentage_complete) }}</td>
+					<td>{{ show_percentage_as_bar('#00ff00',$project->percentage_complete) }}</td>
 					
 					<td>{{ $project->due_date }}</td>
 					
