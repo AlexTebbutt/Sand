@@ -91,7 +91,6 @@ class Project extends BaseModel {
 			
 	}
 
-
 	/* Date Accessors to get format correctly for display */
 
 

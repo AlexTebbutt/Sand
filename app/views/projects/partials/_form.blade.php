@@ -265,7 +265,37 @@
 				
 			</div>
 
-		</div>			
+		</div>		
+
+		<div class="row">
+
+			<div class="col-md-12">
+
+				<div class="panel panel-default">
+		
+					<div class="panel-heading">
+
+						<h2 class="panel-title">Project Notes & Info</h2>
+
+					</div>
+					
+					<div class="panel-body">
+					
+						<div class="form-group col-md-12">
+						
+							{{ Form::label('note', 'Note') }}
+						
+							{{ Form::textarea('note', NULL, ['class' => 'form-control', 'rows' => '8']) }}
+												
+						</div>
+
+					</div>
+					
+				</div>
+				
+			</div>
+
+		</div>		
 
 	</div>
 

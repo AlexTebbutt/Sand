@@ -23,7 +23,7 @@
 			
 					<th>{{ sort_table_by('projects/pipeline' , 'contactName', 'Contact') }}</th>
 
-					<th>{{ sort_table_by('projects/pipeline', 'start_date', 'Start Completed') }}</th>					
+					<th>{{ sort_table_by('projects/pipeline', 'start_date', 'Start date') }}</th>					
 
 					<th>{{ sort_table_by('projects/pipeline', 'resource', 'Resource(s)') }}</th>					
 

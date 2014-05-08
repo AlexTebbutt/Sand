@@ -84,6 +84,8 @@ Route::group(['before' => 'auth'], function()
 	Route::get('/projects/pipeline', array('as' => 'projects/pipeline', 'uses' => 'ProjectsController@showPipeline'));
 
 	Route::get('/projects/onhold', array('as' => 'projects/onhold', 'uses' => 'ProjectsController@showOnHold'));
+
+	Route::get('/projects/rejected', array('as' => 'projects/rejected', 'uses' => 'ProjectsController@showRejected'));
 	
 	Route::get('/projects/delete/{id}','ProjectsController@deleteProject');
 	

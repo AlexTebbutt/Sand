@@ -70,12 +70,29 @@
 	 * @return Built link
 	 */
 	
-	function create_external_link($url, $linkText)
+	function create_external_link($url, $linkText, $attributes = NULL)
 	{
-		
-		return '<a href="' . $url . '" target="_blank">' . $linkText . '</a>';
+
+		return '<a href="' . $url . '" target="_blank"' . (isset($attributes) ? ' ' . HTML::attributes($attributes) : NULL).  '>' . $linkText . '</a>';
 		
 	}
+
+
+		/**
+	 * Set the colour of the invoice link to red if it's outstanding
+	 *
+	 * @param  str  $url, str $linkText, str $paymentPhase
+	 * @return Built link
+	 */
+	
+	function create_invoice_link($url, $linkText, $paymentPhase)
+	{
+
+
+		return create_external_link($url, $linkText, (($paymentPhase < 7) ? ['class' => 'red'] : NULL));
+	
+	}
+
 
 	/**
 	 * Determine which page to redirect to

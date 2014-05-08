@@ -212,6 +212,25 @@ class ProjectsController extends \BaseController {
 		return View::make('projects.onhold', compact('projects'));
 		
 	}
+
+	public function showRejected()
+	{
+
+		$sortBy = (!is_null(Request::get('sortBy')) ? Request::get('sortBy') : 'created_at');
+		$direction = (!is_null(Request::get('direction')) ? Request::get('direction') : 'DESC');
+		//$projects = Project::orderBy($sortBy, $direction)->with('client', 'contact', 'phase')->where('phase_id', '=', '1')->get();
+		
+		$projects = Project::join('clients', 'clients.id', '=', 'projects.client_id')
+     ->join('contacts', 'contacts.id', '=', 'projects.contact_id')
+     ->where('projectphase_id', '=', '10')
+     ->select(array('projects.*','clients.name as clientName','contacts.name as contactName'))
+     ->orderBy($sortBy, $direction)->get(); 
+		
+		Session::put('redirect', URL::full());
+		
+		return View::make('projects.rejected', compact('projects'));
+		
+	}
 	
 	
 	public function deleteProject($id)

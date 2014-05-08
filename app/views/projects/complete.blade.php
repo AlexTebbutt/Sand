@@ -49,7 +49,7 @@
 					
 					<td>{{ $project->completed_date }}</td>
 					
-					<td>{{ create_external_link($project->invoice_link, $project->invoice_number) }}</td>
+					<td>{{ create_invoice_link($project->invoice_link, $project->invoice_number, $project->paymentphase_id) }}</td>
 					
 					<td>{{ $project->estimated_development_time }}</td>
 					

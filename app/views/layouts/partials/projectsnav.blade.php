@@ -26,6 +26,12 @@
 						
 		</li>	
 
+		<li {{ set_active('projects/rejected') }}>
+
+			<a href="/projects/rejected">Rejected Projects</a>			
+						
+		</li>	
+
 		<li {{ set_active('projects/create') }}>
 
 			<a href="/projects/create">Create New Project</a>			
