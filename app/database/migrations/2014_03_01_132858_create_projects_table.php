@@ -34,7 +34,7 @@ class CreateProjectsTable extends Migration {
 			$table->integer('estimated_development_time')->nullable();
 			$table->integer('actual_development_time')->nullable();
 			$table->date('completed_date')->nullable();
-			$table->longtext('note');
+			$table->longtext('note')->nullable();
 			$table->timestamps();
 		});
 	}

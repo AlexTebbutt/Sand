@@ -200,12 +200,7 @@ Route::group(['before' => 'auth'], function()
 	|
 	*/
 	
-	Route::get('users', function()
-	{
-	
-		Return 'Show all users';
-	
-	});
+	Route::resource('users', 'UsersController');
 
 });
 
