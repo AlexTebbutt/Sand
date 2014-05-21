@@ -30,7 +30,15 @@ class SessionsController extends \BaseController {
 			'password' => $input['password']
 		]);
 		
-		if($attempt) return Redirect::intended('/');
+		if($attempt) 
+		{
+		
+			$user = User::find(Auth::user()->id);
+			$user->recordLogin();
+			
+			return Redirect::intended('/');
+			
+		}
 		
 		return Redirect::back()->withInput()->with('login_errors', 'Invalid Credentials');
 		

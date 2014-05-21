@@ -192,5 +192,22 @@
 		return '<div class="bar"><div style="width: ' . $percentage . '%; background-color: ' . $colour . '; opacity: '. (1/(100/($percentage == 0 ? 1 : $percentage))) .';">&nbsp</div';
 		
 	}
+	
+	
+	/**
+	 * Output human readable version for binary value
+	 *
+	 * @param  str  $enabled
+	 * @return Yes / No
+	 */
+	
+	function is_user_enabled($enabled)
+	{
+		
+		return ($enabled == '1') ? 'Yes' : 'No';
+		
+	}
+	
+	
 
 ?>

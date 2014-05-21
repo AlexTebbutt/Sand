@@ -1,4 +1,4 @@
-<nav class="page-header" id="project-nav">
+<nav class="page-header secondary-nav">
 
 	<ul class="nav nav-pills">
 

@@ -24,7 +24,7 @@
 		
 			<li class="dropdown">
 			
-				<a class="dropdown-toggle" data-toggle="dropdown" href="/projects/complete">Projects <b class="caret"></b></a>
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <b class="caret"></b></a>
 				
 				<ul class="dropdown-menu">
 			
@@ -87,6 +87,27 @@
 				<a href="/tasks">Tasks</a>			
 				
 			</li>	
+			
+			@if(Auth::user()->role_id < 2)
+			
+				<li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin <b class="caret"></b></a>
+				
+					<ul class="dropdown-menu">
+					
+						<li>
+							
+							<a href="/users">Users</a>
+							
+						</li>
+					
+					</ul>
+				
+				
+				</li>
+			
+			@endif
 			
 		</ul>
 		

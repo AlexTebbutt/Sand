@@ -200,6 +200,8 @@ Route::group(['before' => 'auth'], function()
 	|
 	*/
 	
+	Route::get('/users', ['as' => 'users', 'uses' => 'UserController@index']);
+	
 	Route::resource('users', 'UsersController');
 
 });

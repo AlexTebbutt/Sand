@@ -3,8 +3,17 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends BaseModel implements UserInterface, RemindableInterface {
 
+
+	protected $guarded = ['id', 'created_at', 'updated_at'];
+	
+	protected static $rules =[
+		'username' => 'required',
+		'email' => 'required|email',
+		'password' => 'required'
+	];
+	
 	/**
 	 * The database table used by the model.
 	 *
@@ -38,6 +47,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->password;
 	}
+	
+		
+	public function getRememberToken()
+	{
+	    return $this->remember_token;
+	}
+	
+	public function setRememberToken($value)
+	{
+	    $this->remember_token = $value;
+	}
+	
+	public function getRememberTokenName()
+	{
+	    return 'remember_token';
+	}	
 
 	/**
 	 * Get the e-mail address where password reminders are sent.
@@ -55,12 +80,18 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$this->attributes['password'] = Hash::make($data);
 		
 	}
-	
-			
+				
 	public function tasks()
 	{
 		
 		return $this->hasMany('Task');		
+		
+	}
+	
+	public function role()
+	{
+		
+		return $this->belongsTo('Role');
 		
 	}
 	
@@ -71,20 +102,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		
 	}
 	
-	public function getRememberToken()
+	public function recordLogin()
 	{
-	    return $this->remember_token;
+		
+		$this->last_login = new DateTime;
+		$this->save();
+		
 	}
-	
-	public function setRememberToken($value)
-	{
-	    $this->remember_token = $value;
-	}
-	
-	public function getRememberTokenName()
-	{
-	    return 'remember_token';
-	}	
+
 
 }
 

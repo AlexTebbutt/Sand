@@ -1,10 +1,10 @@
-@extends('layouts.master')
+@extends('layouts.masters.users')
 
 @section('content')
 
 <div class="row">
 
-	<div class="col-md-9">
+	<div class="col-md-8 col-md-offset-2">
 	
 		<!-- List all users -->
 
@@ -18,13 +18,13 @@
 
 					<th>{{ sort_table_by('users', 'username', 'User Name') }}</th>		
 				
-					<th>Email</th>
+					<th>{{ sort_table_by('users', 'email', 'Email') }}</th>
 				
-					<th>Role</th>
+					<th>{{ sort_table_by('users', 'role_id', 'Role') }}</th>
 				
-					<th>Last Login</th>
+					<th>{{ sort_table_by('users', 'last_login', 'Last Login') }}</th>
 				
-					<th>Enabled</th>
+					<th>{{ sort_table_by('users', 'enabled', 'Enabled') }}</th>
 			
 				</tr>
 		
@@ -34,15 +34,15 @@
 			
 				<tr>
 				
-					<td>{{ link_to_route('users', $user->name, $user->id) }}</td>
+					<td>{{ link_to_route('users.edit', $user->username, $user->id) }}</td>
 					
 					<td>{{ $user->email }}</td>
 					
-					<td>{{ $user->role }}</td>
+					<td>{{ $user->role->name }}</td>
 					
 					<td>{{ $user->last_login }}</td>
 					
-					<td>{{ $user->enabled }}</td>
+					<td>{{ is_user_enabled($user->enabled) }}</td>
 				
 				</tr>
 			
@@ -50,15 +50,6 @@
 		
 		</table>
 	
-	</div>
-	
-	<div class="col-md-3">
-		
-		<!-- Create A New client -->
-		
-		<h2>Add New User</h2>
-		
-
 	</div>
 
 </div>

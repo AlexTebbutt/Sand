@@ -6,10 +6,10 @@
 
 	<div class="col-md-6 col-md-offset-3">
 	
-		<h2>Edit User {{ $user->username }}</h2>
+		<h2>Create New User</h2>
 
-		{{ Form::model($user, ['method' => 'PATCH', 'route' => ['users.update', $user->id], 'class' => 'form']) }}
-		
+		{{ Form::open(['method' => 'POST', 'route' => ['users.store'], 'class' => 'form']) }}		
+
 			<div class="form-group">
 			
 				{{ Form::label('username', 'User Name') }}
@@ -38,6 +38,16 @@
 			
 			</div>
 			
+			<div class="form-group">
+			
+				{{ Form::label('password', 'Initial Password') }}
+			
+				{{ Form::text('password', NULL, ['class' => 'form-control']) }}
+
+				{{ $errors->first('password') }}
+			
+			</div>			
+			
 			<div class="checkbox">
 			
 				{{ Form::label('enabled', 'Enabled') }}
@@ -50,10 +60,8 @@
 				
 				<div class="col-md-6">
 				
-					{{ Form::submit('Update User', ['class' => 'btn btn-primary']) }}
+					{{ Form::submit('Create User', ['class' => 'btn btn-primary']) }}
 					
-					{{ link_to('users/delete/' . $user->id, 'Delete User', ['class' => 'btn btn-danger']) }}
-				
 				</div>
 				
 				<div class="col-md-6 text-right">

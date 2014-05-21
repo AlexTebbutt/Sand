@@ -10,7 +10,8 @@ class UsersController extends \BaseController {
 	public function index()
 	{
 		
-		$users = User::all();
+		$users = User::with('role')->get();
+		Session::put('redirect', URL::full());
 		
 		return View::make('users.index', compact('users'));
 	}
@@ -23,7 +24,11 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		
+		$role = Role::lists('name','id');
+
+		return View::make('users.create', compact('role'));
+		
 	}
 
 
@@ -34,7 +39,19 @@ class UsersController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+
+		$user = New User();
+		$input = array_filter(Input::all(), 'strlen');
+		$user->fill($input);
+		
+		if(!$user->save())
+		{
+		
+			return Redirect::back()->withInput()->withErrors($user->getErrors());
+				
+		}
+		
+		return Redirect::to('users');
 	}
 
 
@@ -58,7 +75,11 @@ class UsersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+
+		$user = User::findOrFail($id);
+		$role = Role::lists('name','id');
+
+		return View::make('users.edit', compact('user','role'));
 	}
 
 
@@ -70,7 +91,14 @@ class UsersController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+
+		$user = User::findOrFail($id);
+		$input = array_filter(Input::all(), 'strlen');
+		$user->fill($input);
+		$user->save();
+		
+		return Redirect::to(check_redirect('users'));	
+
 	}
 
 
