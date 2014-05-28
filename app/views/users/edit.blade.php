@@ -39,8 +39,10 @@
 			</div>
 			
 			<div class="checkbox">
-			
+		
 				{{ Form::label('enabled', 'Enabled') }}
+
+				{{ Form::hidden('enabled', '0') }}
 			
 				{{ Form::checkbox('enabled', (isset($user->enabled) ? 1 : 0), (isset($user->enabled) ? TRUE : '')) }}
 			

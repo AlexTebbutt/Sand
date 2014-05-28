@@ -52,7 +52,7 @@
 			
 				{{ Form::label('enabled', 'Enabled') }}
 			
-				{{ Form::checkbox('enabled', (isset($user->enabled) ? 1 : 0), (isset($user->enabled) ? TRUE : '')) }}
+				{{ Form::checkbox('enabled', 1, 'true') }}
 			
 			</div>
 			

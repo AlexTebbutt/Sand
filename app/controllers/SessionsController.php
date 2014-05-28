@@ -30,7 +30,7 @@ class SessionsController extends \BaseController {
 			'password' => $input['password']
 		]);
 		
-		if($attempt) 
+		if($attempt && (Auth::user()->enabled == TRUE)) 
 		{
 		
 			$user = User::find(Auth::user()->id);
@@ -39,6 +39,8 @@ class SessionsController extends \BaseController {
 			return Redirect::intended('/');
 			
 		}
+		
+		Auth::logout();
 		
 		return Redirect::back()->withInput()->with('login_errors', 'Invalid Credentials');
 		

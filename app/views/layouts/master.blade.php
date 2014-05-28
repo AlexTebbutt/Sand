@@ -33,7 +33,7 @@
 				@include('layouts.partials.nav')
 				
 				@yield('secondary nav')
-			
+
 			</header>
 			
 			@endif

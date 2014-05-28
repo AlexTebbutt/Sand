@@ -202,6 +202,8 @@ Route::group(['before' => 'auth'], function()
 	
 	Route::get('/users', ['as' => 'users', 'uses' => 'UserController@index']);
 	
+	Route::get('/users/delete/{id}','UsersController@deleteUser');
+	
 	Route::resource('users', 'UsersController');
 
 });

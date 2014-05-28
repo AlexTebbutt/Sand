@@ -93,8 +93,14 @@ class UsersController extends \BaseController {
 	{
 
 		$user = User::findOrFail($id);
-		$input = array_filter(Input::all(), 'strlen');
+ 		$input = array_filter(Input::all(), 'strlen'); 
 		$user->fill($input);
+		
+		//$user->fill(Input::all());
+
+		
+//		return $user;
+
 		$user->save();
 		
 		return Redirect::to(check_redirect('users'));	
@@ -110,8 +116,22 @@ class UsersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		
+		User::destroy($id);
+		
+		return Redirect::to(check_redirect('users'));
+		
 	}
+	
+	
+	public function deleteUser($id)
+	{
+		
+		$user = User::findOrFail($id);
+		
+		return View::make('users.delete', compact('user'));	
+			
+	}	
 
 
 }
