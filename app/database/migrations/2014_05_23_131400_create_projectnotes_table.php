@@ -14,8 +14,11 @@ class CreateProjectnotesTable extends Migration {
 	{
 		Schema::create('projectnotes', function(Blueprint $table)
 		{
-			$table->integer('note_id');
+			$table->increments('id');
 			$table->integer('project_id');
+			$table->integer('user_id');
+			$table->longtext('note')->nullable();
+			$table->timestamps();
 		});
 	}
 

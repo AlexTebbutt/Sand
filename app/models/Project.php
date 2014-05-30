@@ -37,6 +37,13 @@ class Project extends BaseModel {
 		return $this->belongsTo('Paymentphase');
 		
 	}
+
+	public function projectnote()
+	{
+		
+		return $this->belongsTo('Projectnote');
+		
+	}
 	
 	public static function whereCurrent()
 	{

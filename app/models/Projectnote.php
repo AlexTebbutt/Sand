@@ -1,13 +1,9 @@
 <?php
 
-class Paymentphase extends Basemodel {
+class Projectnote extends Basemodel {
 
 	protected $guarded = ['id'];
 	
-	protected static $rules =[
-		'name' => 'required'
-	];
-
 	public function project()
 	{
 		
@@ -16,5 +12,3 @@ class Paymentphase extends Basemodel {
 	}
 
 }
-
-?>
