@@ -207,7 +207,23 @@
 		return ($enabled == '1') ? 'Yes' : 'No';
 		
 	}
+
+
+	/**
+	 * Output human readable note information
+	 *
+	 * @param  str  $user_id, array $users, str $date
+	 * @return 'Alex Tebbutt' noted on 12th May 2014'
+	 */
 	
+	function show_note_info($userName, $date)
+	{
+		
+		
+		
+		return 'On ' . (Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d/m/Y \a\t H:i')) . ' ' . $userName . ' noted:';
+		
+	}	
 	
 
 ?>
