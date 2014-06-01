@@ -288,22 +288,26 @@
 							{{ Form::textarea('note', NULL, ['class' => 'form-control', 'rows' => '8']) }}
 												
 						</div>					
-						
-						@foreach($projectnotes as $projectnote)
 
-						<div class="form-group col-md-3">
-	
-							{{ show_note_info($projectnote->userName, $projectnote->created_at) }}
-				
-						</div>
+						@if(!isset($HideProjectNotes))
 						
-						<div class="form-group col-md-9">
+							@foreach($projectnotes as $projectnote)
+							
+							<div class="form-group col-md-3">
+		
+								{{ show_note_info($projectnote->userName, $projectnote->created_at) }}
+					
+							</div>
+							
+							<div class="form-group col-md-9">
+		
+								{{ $projectnote->note }}
+					
+							</div>
 	
-							{{ $projectnote->note }}
-				
-						</div>
-
-						@endforeach					
+							@endforeach	
+							
+						@endif				
 
 					</div>
 					

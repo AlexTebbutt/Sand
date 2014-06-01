@@ -42,8 +42,9 @@ class ProjectsController extends \BaseController {
 		$contacts = Contact::orderBy('name')->lists('name','id');
 		$projectphases = Projectphase::lists('name','id');
 		$paymentphases = Paymentphase::lists('name','id');
+		$projectnotes = NULL;
 
-		return View::make('projects.create', compact('clients', 'contacts', 'projectphases', 'paymentphases'));
+		return View::make('projects.create', compact('clients', 'contacts', 'projectphases', 'paymentphases','projectnotes'));
 		
 	}
 

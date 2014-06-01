@@ -15,7 +15,7 @@
 
 		{{ Form::open(['method' => 'POST', 'route' => ['projects.store'], 'class' => 'form']) }}
 
-			@include('projects/partials/_form')
+			@include('projects/partials/_form', ['HideProjectNotes' => TRUE])
 		
 		{{ Form::close() }}
 
