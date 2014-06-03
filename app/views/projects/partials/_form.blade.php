@@ -293,18 +293,30 @@
 						
 							@foreach($projectnotes as $projectnote)
 							
-							<div class="form-group col-md-3">
-		
-								{{ show_note_info($projectnote->userName, $projectnote->created_at) }}
+								<div class="col-md-12">
 					
-							</div>
+									<div class="panel panel-default">
 							
-							<div class="form-group col-md-9">
-		
-								{{ $projectnote->note }}
+										<div class="panel-heading">
 					
-							</div>
-	
+											<p class="panel-title">{{ show_note_info($projectnote->userName, $projectnote->created_at) }}</p>
+					
+										</div>							
+						
+										<div class="panel-body">
+										
+											<div class="form-group col-md-12">
+			
+												{{ $projectnote->note }}
+												
+											</div>
+											
+										</div>
+										
+									</div>
+						
+								</div>
+
 							@endforeach	
 							
 						@endif				

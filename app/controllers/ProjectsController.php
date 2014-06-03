@@ -2,6 +2,18 @@
 
 class ProjectsController extends \BaseController {
 
+
+	public function dropdown()
+	{
+		
+		$clients = Client::orderBy('name')->lists('name','id');
+
+		return View::make('projects.dynamicDropDown', compact('clients'));
+				
+	}
+
+
+
 	/**
 	 * Display a listing of the resource.
 	 *

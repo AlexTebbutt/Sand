@@ -9,3 +9,7 @@
 .red {
 	color: rgb(259,0,0);
 }
+
+.old-note {
+	border: 1px solid rgba(100,100,100,1);
+}

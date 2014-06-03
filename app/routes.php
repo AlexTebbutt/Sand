@@ -18,6 +18,8 @@ Event::listen('illuminate.query', function($query)
 });
 */
 
+Route::get('/dd', 'ProjectsController@dropdown');
+
 
 /*
 |--------------------------------------------------------------------------
