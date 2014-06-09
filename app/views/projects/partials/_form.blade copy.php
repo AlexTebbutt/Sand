@@ -285,23 +285,13 @@
 					
 					<div class="panel-body">
 					
-						<div class="form-group col-md-10">
+						<div class="form-group col-md-12">
 						
 							{{ Form::label('note', 'Note') }}
 						
 							{{ Form::textarea('note', NULL, ['class' => 'form-control', 'rows' => '8']) }}
 												
 						</div>					
-						
-						<div class="col-md-2 text-right add-note-button">
-						
-							{{ Form::hidden('project_id', $project->id, ['id' => 'project_id']) }}
-
-							{{ Form::hidden('user_id', Auth::user()->id, ['id' => 'user_id']) }}
-						
-						 	{{ Form::button('Add Note', ['id' => 'add-note', 'class' => 'btn btn-primary add-new-note-button']) }}
-							
-						</div>
 
 						@if(!isset($HideProjectNotes))
 						

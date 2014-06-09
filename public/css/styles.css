@@ -13,3 +13,7 @@
 .old-note {
 	border: 1px solid rgba(100,100,100,1);
 }
+
+.add-new-note-button {
+	margin-top: 25px;
+}

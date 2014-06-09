@@ -3,11 +3,12 @@
 @section('scripts')		
 {{ HTML::style('css/datepicker.css') }}
 {{ HTML::script('js/bootstrap-datepicker.js') }}
+{{ HTML::script('js/functions.js') }}
 @stop
 
 @section('content')
 
-<div class="row">
+<div class="row" ng-app="projectsApp">
 
 	<div class="col-md-12">
 	

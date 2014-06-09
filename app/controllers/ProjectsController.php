@@ -106,7 +106,7 @@ class ProjectsController extends \BaseController {
 		
 		$project = Project::findOrFail($id);
 		$clients = Client::orderBy('name')->lists('name','id');
-		$contacts = Contact::orderBy('name')->lists('name','id');
+		$contacts = Contact::where('client_id', $project->client_id)->orderBy('name')->lists('name','id');
 		$projectphases = Projectphase::lists('name','id');
 		$paymentphases = Paymentphase::lists('name','id');
 		/* $projectnotes = Projectnote::where('project_id', $id)->orderBy('updated_at', 'DESC')->get() */;

@@ -110,7 +110,7 @@ Route::group(['before' => 'auth'], function()
 	*/
 	
 	Route::get('clients', array('as' => 'clients', 'uses' => 'ClientsController@index'));
-	
+
 	Route::resource('clients','ClientsController');
 	
 	
@@ -126,6 +126,16 @@ Route::group(['before' => 'auth'], function()
 	/* Route::post('/contacts', 'ContactsController@store'); */
 	
 	Route::get('contacts', array('as' => 'contacts', 'uses' => 'ContactsController@index'));
+	
+	Route::get('/contacts/client/{id}/list', function($id)
+	{
+		
+		$contacts = Contact::where('client_id', $id)->lists('name', 'id');
+
+		return Response::json($contacts);
+		
+	});
+	
 	
 	Route::resource('contacts','ContactsController');
 	
@@ -207,6 +217,51 @@ Route::group(['before' => 'auth'], function()
 	Route::get('/users/delete/{id}','UsersController@deleteUser');
 	
 	Route::resource('users', 'UsersController');
+	
+	
+		/*
+	|--------------------------------------------------------------------------
+	| Notes
+	|--------------------------------------------------------------------------
+	|
+	| notes:
+	|
+	*/
+	
+
+/*
+	Route::post('/note/project/create', function()
+	{
+
+		return 'Ajax POST request captured.';	
+		
+		if(Request::ajax())
+		{
+		
+			return Response::json(Input::all());
+	
+		}		
+		
+	});
+
+	
+	Route::get('/note/project/create', function()
+	{
+		
+		if(Request::ajax())
+		{
+		
+			return 'Ajax GET request captured.';
+			
+		}
+		
+		
+	});
+*/
+
+	
+	Route::get('/note/project/create', 'ProjectNotesController@store');
+	
 
 });
 
