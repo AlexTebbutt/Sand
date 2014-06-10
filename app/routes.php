@@ -229,12 +229,14 @@ Route::group(['before' => 'auth'], function()
 	*/
 	
 
+	Route::get('/testnote', 'ProjectNotesController@teststore');
+
+	Route::post('/note/project/create', 'ProjectNotesController@store');
 /*
+
 	Route::post('/note/project/create', function()
 	{
 
-		return 'Ajax POST request captured.';	
-		
 		if(Request::ajax())
 		{
 		
@@ -243,7 +245,9 @@ Route::group(['before' => 'auth'], function()
 		}		
 		
 	});
-
+	
+*/
+/*
 	
 	Route::get('/note/project/create', function()
 	{
@@ -259,8 +263,10 @@ Route::group(['before' => 'auth'], function()
 	});
 */
 
+/*
 	
-	Route::get('/note/project/create', 'ProjectNotesController@store');
+
+*/
 	
 
 });

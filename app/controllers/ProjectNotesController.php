@@ -37,6 +37,39 @@ class ProjectNotesController extends \BaseController {
 		
 	}
 
+	public function teststore()
+	{
+
+			//$project = new Project(Input::all());
+			$projectNote = New Projectnote();
+			$projectNote->user_id = '1';
+			$projectNote->project_id = '1';
+			$projectNote->note = 'testetsetasdfasdf';
+		
+			if(!$projectNote->save())
+			{
+
+				return $projectNote->getErrors();
+					
+			} 
+
+			$username = User::find($projectNote->user_id)->username;
+			
+			$username = User::find($projectNote->user_id)->username;
+			$date = (Carbon::createFromFormat('Y-m-d H:i:s', $projectNote->created_at)->format('d/m/Y \a\t H:i'));
+			
+			$responseValues = array(
+				'note' => $projectNote->note,
+				'added_on' => $date,
+				'username' => $username
+			);
+			
+			
+			return Response::json($responseValues);
+		
+		}
+
+
 
 	/**
 	 * Store a newly created resource in storage.
@@ -49,7 +82,6 @@ class ProjectNotesController extends \BaseController {
     if (Request::ajax())
     {
 
-/*
 			//$project = new Project(Input::all());
 			$projectNote = New Projectnote();
 			$input = array_filter(Input::all(), 'strlen');
@@ -57,14 +89,26 @@ class ProjectNotesController extends \BaseController {
 		
 			if(!$projectNote->save())
 			{
-			
-				return 'Laravel error';
+
+				$responseValues = array(
+					'validation_failed' => 1,
+					'errors' => 'Please supply note copy'
+				);
+				
+				return Response::json($responseValues);
 					
 			} 
-*/ 
-
-			return 'Ajax POST request processed.';
-			  
+			
+			$username = User::find($projectNote->user_id)->username;
+			$date = (Carbon::createFromFormat('Y-m-d H:i:s', $projectNote->created_at)->format('d/m/Y \a\t H:i'));
+			
+			$responseValues = array(
+				'note' => $projectNote->note,
+				'added_on' => $date,
+				'username' => $username
+			);
+			
+			return Response::json($responseValues);
 		
 		}
 

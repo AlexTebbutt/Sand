@@ -47,8 +47,8 @@ $(document).ready(function()
 		newNote.user_id = $('#user_id').val();
 		newNote.note = $('#note').val();	
 		
-		var postdata = JSON.stringify(newNote);
-
+/* 		var data = JSON.stringify(newNote); */
+		console.log(newNote);
 		event.preventDefault();		
 
 /*
@@ -88,13 +88,27 @@ $(document).ready(function()
 		
 		$.ajax(
 		{
-			type: 'GET',
+			type: 'POST',
 			url: '/note/project/create',
-			data: postdata,
+			data: newNote,
 			success: function(data)
 			{
 				
-				console.log(data);
+				if(data.validation_failed == 1)
+				{
+
+					$('label[for="note"]').after('<span> (' + data.errors + ')</span>');			
+					
+				}
+				else
+				{
+				
+					$('#note').val('');
+					$('#project-notes')hide().prepend('<div class="col-md-12"><div class="panel panel-default"><div class="panel-heading"><p class="panel-title">On ' + data.added_on + ' ' + data.username + ' added:</p></div><div class="panel-body"><div class="form-group col-md-12">' + data.note + '</div></div></div></div>').fadeIn('slow');
+					console.log(data);
+					
+				}
+
 				
 			}
 			,

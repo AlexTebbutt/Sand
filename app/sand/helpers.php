@@ -221,7 +221,7 @@
 		
 		
 		
-		return 'On ' . (Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d/m/Y \a\t H:i')) . ' ' . $userName . ' noted:';
+		return 'On ' . (Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d/m/Y \a\t H:i')) . ' ' . $userName . ' added:';
 		
 	}	
 	

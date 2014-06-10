@@ -287,7 +287,7 @@
 					
 						<div class="form-group col-md-10">
 						
-							{{ Form::label('note', 'Note') }}
+							{{ Form::label('note', 'Note', ['id' => 'note-label']) }}
 						
 							{{ Form::textarea('note', NULL, ['class' => 'form-control', 'rows' => '8']) }}
 												
@@ -304,7 +304,9 @@
 						</div>
 
 						@if(!isset($HideProjectNotes))
-						
+
+						<div id="project-notes">
+												
 							@foreach($projectnotes as $projectnote)
 							
 								<div class="col-md-12">
@@ -332,6 +334,8 @@
 								</div>
 
 							@endforeach	
+							
+						</div>
 							
 						@endif				
 
