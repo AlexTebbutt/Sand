@@ -257,7 +257,7 @@
 			
 						<div class="form-group col-md-2">
 						
-							{{ Form::label('actual_development_time', 'Actual Dev Time (H)') }}
+							{{ Form::label('actual_development_time', 'Act. Dev. Time (H)') }}
 						
 							{{ Form::text('actual_development_time', NULL, ['class' => 'form-control']) }}
 						
@@ -293,6 +293,8 @@
 												
 						</div>					
 						
+						@if(!isset($HideProjectNotes))
+
 						<div class="col-md-2 text-right add-note-button">
 						
 							{{ Form::hidden('project_id', $project->id, ['id' => 'project_id']) }}
@@ -302,9 +304,7 @@
 						 	{{ Form::button('Add Note', ['id' => 'add-note', 'class' => 'btn btn-primary add-new-note-button']) }}
 							
 						</div>
-
-						@if(!isset($HideProjectNotes))
-
+						
 						<div id="project-notes">
 												
 							@foreach($projectnotes as $projectnote)

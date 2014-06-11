@@ -71,6 +71,7 @@ class ProjectsController extends \BaseController {
 		//$project = new Project(Input::all());
 		$project = New Project();
 		$input = array_filter(Input::all(), 'strlen');
+
 		$project->fill($input);
 		
 		if(!$project->save())
@@ -130,7 +131,7 @@ class ProjectsController extends \BaseController {
 	{
 		
 		$project = Project::findOrFail($id);
-		$input = array_filter(Input::all(), 'strlen');
+		$input = array_filter(Input::except('project_id', 'user_id', 'note'), 'strlen');
 		$project->fill($input);
 		$project->save();
 		
@@ -244,6 +245,8 @@ class ProjectsController extends \BaseController {
      ->where('projectphase_id', '=', '10')
      ->select(array('projects.*','clients.name as clientName','contacts.name as contactName'))
      ->orderBy($sortBy, $direction)->get(); 
+     
+    $projectNote = ProjectNote::orderBy('created_at', 'DESC')->first();
 		
 		Session::put('redirect', URL::full());
 		

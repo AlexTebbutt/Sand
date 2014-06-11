@@ -45,46 +45,11 @@ $(document).ready(function()
 		var newNote = new Object();
 		newNote.project_id = $('#project_id').val();
 		newNote.user_id = $('#user_id').val();
-		newNote.note = $('#note').val();	
-		
-/* 		var data = JSON.stringify(newNote); */
+		newNote.note = $('#note').val().replace(/\r?\n/g, '<br>');	
+
 		console.log(newNote);
 		event.preventDefault();		
 
-/*
-		$.ajax(
-		{
-			
-			type:'POST',
-			url:'/note/project/create',
-			data:postdata,
-			success:function()
-			{
-				
-				console.log(data);
-				
-			}
-			
-		});
-*/
-
-/*
-		$.post('/note/project/create', newNote, function(data)
-		{
-			
-			console.log(data);
-			
-		});
-*/
-
-/*
-		$.get('/note/project/create', function(data)
-		{
-			
-			console.log(data);
-			
-		});
-*/
 		
 		$.ajax(
 		{
@@ -104,7 +69,7 @@ $(document).ready(function()
 				{
 				
 					$('#note').val('');
-					$('#project-notes')hide().prepend('<div class="col-md-12"><div class="panel panel-default"><div class="panel-heading"><p class="panel-title">On ' + data.added_on + ' ' + data.username + ' added:</p></div><div class="panel-body"><div class="form-group col-md-12">' + data.note + '</div></div></div></div>').fadeIn('slow');
+					$('#project-notes').hide().prepend('<div class="col-md-12"><div class="panel panel-default"><div class="panel-heading"><p class="panel-title">On ' + data.added_on + ' ' + data.username + ' added:</p></div><div class="panel-body"><div class="form-group col-md-12">' + data.note + '</div></div></div></div>').fadeIn('slow');
 					console.log(data);
 					
 				}
