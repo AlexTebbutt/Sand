@@ -71,6 +71,13 @@ class ProjectphasesTableSeeder extends Seeder {
 			8 => 
 			array (
 				'id' => 9,
+				'name' => 'On Hold',
+				'created_at' => '0000-00-00 00:00:00',
+				'updated_at' => '0000-00-00 00:00:00',
+			),
+			9 => 
+			array (
+				'id' => 10,
 				'name' => 'Rejected',
 				'created_at' => '0000-00-00 00:00:00',
 				'updated_at' => '0000-00-00 00:00:00',

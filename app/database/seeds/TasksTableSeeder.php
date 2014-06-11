@@ -14,47 +14,49 @@ class TasksTableSeeder extends Seeder {
 		\DB::table('tasks')->insert(array (
 			0 => 
 			array (
-				'id' => 1,
-				'title' => 'Finish To Do Module',
-				'note' => 'Some notes relating to what I need to do to finish this',
+				'id' => 8,
+				'title' => 'Add \'Complete Task\' functionality',
+				'note' => 'Style check box next to task
+Use AJAX to complete a task once the box is checked
+Use AJAX to reload tasks',
 				'user_id' => 1,
-				'due_date' => '2014-05-12 13:01:00',
+				'due_date' => NULL,
 				'complete' => 0,
-				'created_at' => '2014-04-29 01:42:40',
-				'updated_at' => '2014-04-29 01:42:40',
+				'created_at' => '2014-05-01 08:53:05',
+				'updated_at' => '2014-05-01 08:53:05',
 			),
 			1 => 
 			array (
-				'id' => 2,
-				'title' => 'Make a nice Coffee',
-				'note' => 'Mocha please, no sugar',
+				'id' => 12,
+				'title' => 'Build a user show page',
+				'note' => 'Display all current users. Link through to edit a specific user. Super admins only should have access to this.',
 				'user_id' => 1,
 				'due_date' => NULL,
 				'complete' => 0,
-				'created_at' => '2014-04-29 01:42:40',
-				'updated_at' => '2014-04-29 01:42:40',
+				'created_at' => '2014-05-09 22:38:26',
+				'updated_at' => '2014-05-09 22:40:13',
 			),
 			2 => 
 			array (
-				'id' => 3,
-				'title' => 'Plan the wedding',
-				'note' => 'Arrrggghhh, too much to do!!!',
-				'user_id' => 2,
+				'id' => 14,
+				'title' => 'Build \'Create a new user\' page',
+				'note' => '',
+				'user_id' => 1,
 				'due_date' => NULL,
 				'complete' => 0,
-				'created_at' => '2014-04-29 01:42:40',
-				'updated_at' => '2014-04-29 01:42:40',
+				'created_at' => '2014-05-09 22:39:52',
+				'updated_at' => '2014-05-09 22:40:02',
 			),
 			3 => 
 			array (
-				'id' => 4,
-				'title' => 'Make a wedding music list',
-				'note' => 'Lots of songs!!',
-				'user_id' => 2,
+				'id' => 15,
+				'title' => 'Build a Roles management page',
+				'note' => '',
+				'user_id' => 1,
 				'due_date' => NULL,
 				'complete' => 0,
-				'created_at' => '2014-04-29 01:42:40',
-				'updated_at' => '2014-04-29 01:42:40',
+				'created_at' => '2014-05-09 22:40:26',
+				'updated_at' => '2014-05-09 22:40:26',
 			),
 		));
 	}

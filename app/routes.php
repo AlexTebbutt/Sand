@@ -18,9 +18,6 @@ Event::listen('illuminate.query', function($query)
 });
 */
 
-Route::get('/dd', 'ProjectsController@dropdown');
-
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -221,53 +218,23 @@ Route::group(['before' => 'auth'], function()
 	
 		/*
 	|--------------------------------------------------------------------------
-	| Notes
+	| Project Notes
 	|--------------------------------------------------------------------------
 	|
-	| notes:
+	|
+	*/
+
+	Route::post('/api/note/project/create', 'ProjectNotesController@store');
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Costings: Estimate and invoice information
+	|--------------------------------------------------------------------------
+	|
 	|
 	*/
 	
-
-	Route::get('/testnote', 'ProjectNotesController@teststore');
-
-	Route::post('/note/project/create', 'ProjectNotesController@store');
-/*
-
-	Route::post('/note/project/create', function()
-	{
-
-		if(Request::ajax())
-		{
-		
-			return Response::json(Input::all());
-	
-		}		
-		
-	});
-	
-*/
-/*
-	
-	Route::get('/note/project/create', function()
-	{
-		
-		if(Request::ajax())
-		{
-		
-			return 'Ajax GET request captured.';
-			
-		}
-		
-		
-	});
-*/
-
-/*
-	
-
-*/
-	
+	Route::post('/api/costing/create', 'CostingsController@store');
 
 });
 

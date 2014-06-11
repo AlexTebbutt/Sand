@@ -8,7 +8,7 @@
 
 @section('content')
 
-<div class="row" ng-app="projectsApp">
+<div class="row">
 
 	<div class="col-md-12">
 	
@@ -20,6 +20,16 @@
 		
 		{{ Form::close() }}
 
+	</div>
+	
+</div>
+
+<div class="row">
+
+	<div class="col-md-12">
+	
+		@include('projects/partials/_costingForm')
+	
 	</div>
 	
 </div>

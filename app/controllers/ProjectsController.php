@@ -243,10 +243,9 @@ class ProjectsController extends \BaseController {
 		$projects = Project::join('clients', 'clients.id', '=', 'projects.client_id')
      ->join('contacts', 'contacts.id', '=', 'projects.contact_id')
      ->where('projectphase_id', '=', '10')
-     ->select(array('projects.*','clients.name as clientName','contacts.name as contactName'))
+     ->join('projectnotes', 'projectnotes.project_id', '=', 'projects.id')
+     ->select(array('projects.*','clients.name as clientName','contacts.name as contactName', 'projectnotes.note as note'))
      ->orderBy($sortBy, $direction)->get(); 
-     
-    $projectNote = ProjectNote::orderBy('created_at', 'DESC')->first();
 		
 		Session::put('redirect', URL::full());
 		

@@ -21,8 +21,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'Rob.Kent@spreadingjam.com',
 				'main_phone' => '020 3128 6886',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 03:32:34',
-				'updated_at' => '2014-04-04 03:32:34',
+				'created_at' => '2014-04-04 13:32:34',
+				'updated_at' => '2014-04-04 13:32:34',
 			),
 			1 => 
 			array (
@@ -33,8 +33,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'Sebastian.Carder@spreadingjam.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 03:32:57',
-				'updated_at' => '2014-04-04 03:37:35',
+				'created_at' => '2014-04-04 13:32:57',
+				'updated_at' => '2014-04-04 13:37:35',
 			),
 			2 => 
 			array (
@@ -45,8 +45,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'natalie.lennon@tbwa.com',
 				'main_phone' => '020 7573 6509',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 03:33:29',
-				'updated_at' => '2014-04-04 03:37:41',
+				'created_at' => '2014-04-04 13:33:29',
+				'updated_at' => '2014-04-04 13:37:41',
 			),
 			3 => 
 			array (
@@ -57,8 +57,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'olga.bortkevica@tbwa.com',
 				'main_phone' => '020 7573 6678',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 03:38:36',
-				'updated_at' => '2014-04-04 03:38:36',
+				'created_at' => '2014-04-04 13:38:36',
+				'updated_at' => '2014-04-04 13:38:36',
 			),
 			4 => 
 			array (
@@ -69,8 +69,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'svedginton@hotmail.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 03:39:04',
-				'updated_at' => '2014-04-04 03:39:04',
+				'created_at' => '2014-04-04 13:39:04',
+				'updated_at' => '2014-04-04 13:39:04',
 			),
 			5 => 
 			array (
@@ -81,8 +81,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'sinead@four23.net',
 				'main_phone' => '020 7253 7219',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 05:20:37',
-				'updated_at' => '2014-04-04 05:20:37',
+				'created_at' => '2014-04-04 15:20:37',
+				'updated_at' => '2014-04-04 15:20:37',
 			),
 			6 => 
 			array (
@@ -93,8 +93,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'maren@coppafeel.org',
 				'main_phone' => '01872 519239',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 06:06:51',
-				'updated_at' => '2014-04-04 06:06:51',
+				'created_at' => '2014-04-04 16:06:51',
+				'updated_at' => '2014-04-04 16:06:51',
 			),
 			7 => 
 			array (
@@ -105,8 +105,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'olivia@breedlondon.com',
 				'main_phone' => '020 7269 0196',
 				'mobile_phone' => '0777 599 2006',
-				'created_at' => '2014-04-04 08:22:20',
-				'updated_at' => '2014-04-04 08:22:20',
+				'created_at' => '2014-04-04 18:22:20',
+				'updated_at' => '2014-04-04 18:22:20',
 			),
 			8 => 
 			array (
@@ -117,8 +117,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'Julian.Wakeley@sudler.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 08:22:52',
-				'updated_at' => '2014-04-04 08:22:52',
+				'created_at' => '2014-04-04 18:22:52',
+				'updated_at' => '2014-04-04 18:22:52',
 			),
 			9 => 
 			array (
@@ -129,8 +129,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'garrypmonaghan@gmail.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-04 08:23:22',
-				'updated_at' => '2014-04-04 08:23:22',
+				'created_at' => '2014-04-04 18:23:22',
+				'updated_at' => '2014-04-04 18:23:22',
 			),
 			10 => 
 			array (
@@ -141,8 +141,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'zena@cuedevelopments.co.uk',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 00:58:29',
-				'updated_at' => '2014-04-10 00:58:29',
+				'created_at' => '2014-04-10 10:58:29',
+				'updated_at' => '2014-04-10 10:58:29',
 			),
 			11 => 
 			array (
@@ -153,8 +153,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'michael.fensom@ibizarocks.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:11:50',
-				'updated_at' => '2014-04-10 01:11:50',
+				'created_at' => '2014-04-10 11:11:50',
+				'updated_at' => '2014-04-10 11:11:50',
 			),
 			12 => 
 			array (
@@ -165,8 +165,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'Ben.Potter@Leapfrogg.co.uk',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:18:45',
-				'updated_at' => '2014-04-10 01:18:45',
+				'created_at' => '2014-04-10 11:18:45',
+				'updated_at' => '2014-04-10 11:18:45',
 			),
 			13 => 
 			array (
@@ -177,8 +177,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'Anna.Taylor@Leapfrogg.co.uk',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:19:08',
-				'updated_at' => '2014-04-10 01:19:08',
+				'created_at' => '2014-04-10 11:19:08',
+				'updated_at' => '2014-04-10 11:19:08',
 			),
 			14 => 
 			array (
@@ -189,8 +189,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'Chris@gpstudio.uk.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:22:13',
-				'updated_at' => '2014-04-10 01:22:13',
+				'created_at' => '2014-04-10 11:22:13',
+				'updated_at' => '2014-04-10 11:22:13',
 			),
 			15 => 
 			array (
@@ -201,8 +201,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'jo@skoposdesign.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:22:43',
-				'updated_at' => '2014-04-10 01:22:43',
+				'created_at' => '2014-04-10 11:22:43',
+				'updated_at' => '2014-04-10 11:22:43',
 			),
 			16 => 
 			array (
@@ -213,8 +213,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'rachel.carless@rspb.org.uk',
 				'main_phone' => '01273 763 374',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:23:14',
-				'updated_at' => '2014-04-10 01:23:14',
+				'created_at' => '2014-04-10 11:23:14',
+				'updated_at' => '2014-04-10 11:23:14',
 			),
 			17 => 
 			array (
@@ -225,8 +225,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'mark.moses@startjg.com',
 				'main_phone' => '020 7269 0101',
 				'mobile_phone' => '07715 291997',
-				'created_at' => '2014-04-10 01:23:59',
-				'updated_at' => '2014-04-10 01:23:59',
+				'created_at' => '2014-04-10 11:23:59',
+				'updated_at' => '2014-04-10 11:23:59',
 			),
 			18 => 
 			array (
@@ -237,8 +237,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'ryan@iovox.com',
 				'main_phone' => '020 7099 1077',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:24:41',
-				'updated_at' => '2014-04-10 01:24:41',
+				'created_at' => '2014-04-10 11:24:41',
+				'updated_at' => '2014-04-10 11:24:41',
 			),
 			19 => 
 			array (
@@ -249,8 +249,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'debbie.jcole@atticus-associates.com',
 				'main_phone' => '',
 				'mobile_phone' => '07786 802 790',
-				'created_at' => '2014-04-10 01:25:07',
-				'updated_at' => '2014-04-10 01:25:07',
+				'created_at' => '2014-04-10 11:25:07',
+				'updated_at' => '2014-04-10 11:25:07',
 			),
 			20 => 
 			array (
@@ -261,8 +261,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'justine@limalondon.com',
 				'main_phone' => '0203 002 2640',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:51:53',
-				'updated_at' => '2014-04-10 01:51:53',
+				'created_at' => '2014-04-10 11:51:53',
+				'updated_at' => '2014-04-10 11:51:53',
 			),
 			21 => 
 			array (
@@ -273,8 +273,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'mark.gledhill@sudler.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 01:57:16',
-				'updated_at' => '2014-04-10 01:57:16',
+				'created_at' => '2014-04-10 11:57:16',
+				'updated_at' => '2014-04-10 11:57:16',
 			),
 			22 => 
 			array (
@@ -285,8 +285,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'vishal.ravel@fcbinferno.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 02:03:20',
-				'updated_at' => '2014-04-10 02:03:20',
+				'created_at' => '2014-04-10 12:03:20',
+				'updated_at' => '2014-04-10 12:03:20',
 			),
 			23 => 
 			array (
@@ -297,8 +297,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'tom.lowndes@startjg.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 02:07:45',
-				'updated_at' => '2014-04-10 02:07:45',
+				'created_at' => '2014-04-10 12:07:45',
+				'updated_at' => '2014-04-10 12:07:45',
 			),
 			24 => 
 			array (
@@ -309,8 +309,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'ruari.burgham@sudler.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 20:28:46',
-				'updated_at' => '2014-04-18 02:50:56',
+				'created_at' => '2014-04-11 06:28:46',
+				'updated_at' => '2014-04-18 12:50:56',
 			),
 			25 => 
 			array (
@@ -321,8 +321,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'tony@unknown.com',
 				'main_phone' => '',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-10 23:37:49',
-				'updated_at' => '2014-04-10 23:37:49',
+				'created_at' => '2014-04-11 09:37:49',
+				'updated_at' => '2014-04-11 09:37:49',
 			),
 			26 => 
 			array (
@@ -333,8 +333,8 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'info@initialsmarketing.co.uk',
 				'main_phone' => '020 7747 7400',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-17 02:34:35',
-				'updated_at' => '2014-04-17 02:34:35',
+				'created_at' => '2014-04-17 12:34:35',
+				'updated_at' => '2014-04-17 12:34:35',
 			),
 			27 => 
 			array (
@@ -345,8 +345,116 @@ class ContactsTableSeeder extends Seeder {
 				'email' => 'lauren.gibson@medway.gov.uk',
 				'main_phone' => '01634 337083',
 				'mobile_phone' => '',
-				'created_at' => '2014-04-29 21:18:40',
-				'updated_at' => '2014-04-29 21:18:40',
+				'created_at' => '2014-04-30 07:18:40',
+				'updated_at' => '2014-04-30 07:18:40',
+			),
+			28 => 
+			array (
+				'id' => 29,
+				'client_id' => 3,
+				'name' => 'Chloe Nicholson',
+				'role' => 'Senior Dealer Marketing Consultant',
+				'email' => 'chloe.nicholson@tbwa.com',
+				'main_phone' => '020 7573 7197',
+				'mobile_phone' => '',
+				'created_at' => '2014-05-07 07:25:15',
+				'updated_at' => '2014-05-07 07:25:15',
+			),
+			29 => 
+			array (
+				'id' => 30,
+				'client_id' => 23,
+				'name' => 'Elisabetta Cirulli',
+				'role' => 'Project Manager',
+				'email' => 'elisabetta@home-associates.com',
+				'main_phone' => '020 7183 3223',
+				'mobile_phone' => '07749 142 295',
+				'created_at' => '2014-05-07 20:28:57',
+				'updated_at' => '2014-05-07 20:28:57',
+			),
+			30 => 
+			array (
+				'id' => 31,
+				'client_id' => 24,
+				'name' => 'Not Known',
+				'role' => '',
+				'email' => 'not@known.com',
+				'main_phone' => '',
+				'mobile_phone' => '',
+				'created_at' => '2014-05-07 20:30:17',
+				'updated_at' => '2014-05-07 20:30:17',
+			),
+			31 => 
+			array (
+				'id' => 32,
+				'client_id' => 25,
+				'name' => 'Simon Kentish',
+				'role' => '',
+				'email' => 'simon.kentish@achieveevents.com',
+				'main_phone' => '',
+				'mobile_phone' => '',
+				'created_at' => '2014-05-07 23:09:00',
+				'updated_at' => '2014-05-07 23:09:00',
+			),
+			32 => 
+			array (
+				'id' => 33,
+				'client_id' => 3,
+				'name' => 'Rachel Patel',
+				'role' => '',
+				'email' => 'rachel.patel@tbwa.com',
+				'main_phone' => '',
+				'mobile_phone' => '',
+				'created_at' => '2014-05-23 22:51:01',
+				'updated_at' => '2014-05-23 22:51:01',
+			),
+			33 => 
+			array (
+				'id' => 34,
+				'client_id' => 26,
+				'name' => 'Tristan Collins',
+				'role' => '',
+				'email' => 'tristan@mailforce.net',
+				'main_phone' => '',
+				'mobile_phone' => '',
+				'created_at' => '2014-05-27 06:50:46',
+				'updated_at' => '2014-05-27 06:50:46',
+			),
+			34 => 
+			array (
+				'id' => 35,
+				'client_id' => 27,
+				'name' => 'Nicholas Morland',
+				'role' => 'Owner',
+				'email' => 'nick@coloridostudios.com',
+				'main_phone' => '',
+				'mobile_phone' => '07843 441831',
+				'created_at' => '2014-05-29 21:38:46',
+				'updated_at' => '2014-05-29 21:39:16',
+			),
+			35 => 
+			array (
+				'id' => 36,
+				'client_id' => 28,
+				'name' => 'Chris Wood',
+				'role' => 'Owner',
+				'email' => 'chrisw@ragdoll.co.uk',
+				'main_phone' => '',
+				'mobile_phone' => '',
+				'created_at' => '2014-06-10 14:01:37',
+				'updated_at' => '2014-06-10 14:01:37',
+			),
+			36 => 
+			array (
+				'id' => 37,
+				'client_id' => 1,
+				'name' => 'Chris Savioz',
+				'role' => 'Digital Project Manager',
+				'email' => 'Chris.Savioz@fcbinferno.com',
+			'main_phone' => ' +44 (0)20 3048 0034',
+				'mobile_phone' => '',
+				'created_at' => '2014-06-10 17:21:10',
+				'updated_at' => '2014-06-10 17:21:10',
 			),
 		));
 	}

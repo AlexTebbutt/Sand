@@ -54,7 +54,7 @@ $(document).ready(function()
 		$.ajax(
 		{
 			type: 'POST',
-			url: '/note/project/create',
+			url: '/api/note/project/create',
 			data: newNote,
 			success: function(data)
 			{
