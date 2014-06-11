@@ -110,6 +110,8 @@ class ProjectsController extends \BaseController {
 		$contacts = Contact::where('client_id', $project->client_id)->orderBy('name')->lists('name','id');
 		$projectphases = Projectphase::lists('name','id');
 		$paymentphases = Paymentphase::lists('name','id');
+		$costings = Costing::where('project_id', $id)->orderBy('created_at' ,'DESC')->get();
+
 		/* $projectnotes = Projectnote::where('project_id', $id)->orderBy('updated_at', 'DESC')->get() */;
 		
 		$projectnotes = Projectnote::join('users', 'users.id', '=', 'projectnotes.user_id')
@@ -117,7 +119,7 @@ class ProjectsController extends \BaseController {
 			->select(array('projectnotes.*', 'users.username as userName'))
 			->orderBy('updated_at', 'DESC')->get();
 
-		return View::make('projects.edit', compact('project','clients', 'contacts', 'projectphases', 'paymentphases', 'projectnotes'));
+		return View::make('projects.edit', compact('project','clients', 'contacts', 'projectphases', 'paymentphases', 'projectnotes', 'costings'));
 		
 	}
 

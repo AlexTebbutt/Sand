@@ -234,7 +234,9 @@ Route::group(['before' => 'auth'], function()
 	|
 	*/
 	
-	Route::post('/api/costing/create', 'CostingsController@store');
+	Route::get('/costings/delete/{id}', array('as' => 'costings.delete', 'uses' => 'CostingsController@destroy'));
+
+	Route::resource('costings', 'CostingsController');
 
 });
 

@@ -257,7 +257,7 @@
 			
 						<div class="form-group col-md-2">
 						
-							{{ Form::label('actual_development_time', 'Actual Dev Time (H)') }}
+							{{ Form::label('actual_development_time', 'Act. Dev. Time (H)') }}
 						
 							{{ Form::text('actual_development_time', NULL, ['class' => 'form-control']) }}
 						
@@ -285,16 +285,28 @@
 					
 					<div class="panel-body">
 					
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-10">
 						
-							{{ Form::label('note', 'Note') }}
+							{{ Form::label('note', 'Note', ['id' => 'note-label']) }}
 						
 							{{ Form::textarea('note', NULL, ['class' => 'form-control', 'rows' => '8']) }}
 												
 						</div>					
-
-						@if(!isset($HideProjectNotes))
 						
+						@if(!isset($HideProjectNotes))
+
+						<div class="col-md-2 text-right add-note-button">
+						
+							{{ Form::hidden('project_id', $project->id, ['id' => 'project_id']) }}
+
+							{{ Form::hidden('user_id', Auth::user()->id, ['id' => 'user_id']) }}
+						
+						 	{{ Form::button('Add Note', ['id' => 'add-note', 'class' => 'btn btn-primary add-new-note-button']) }}
+							
+						</div>
+						
+						<div id="project-notes">
+												
 							@foreach($projectnotes as $projectnote)
 							
 								<div class="col-md-12">
@@ -322,6 +334,8 @@
 								</div>
 
 							@endforeach	
+							
+						</div>
 							
 						@endif				
 

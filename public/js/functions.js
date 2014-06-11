@@ -1,6 +1,8 @@
 $(document).ready(function()
 {
 
+	$('.costing-detail, .notes-detail').hide();
+	
 	//Update contact list based on client selected in create / edit project forms
 	//Only run on change
 	$('#client_id').change(function()
@@ -47,7 +49,6 @@ $(document).ready(function()
 		newNote.user_id = $('#user_id').val();
 		newNote.note = $('#note').val().replace(/\r?\n/g, '<br>');	
 
-		console.log(newNote);
 		event.preventDefault();		
 
 		
@@ -70,7 +71,7 @@ $(document).ready(function()
 				
 					$('#note').val('');
 					$('#project-notes').hide().prepend('<div class="col-md-12"><div class="panel panel-default"><div class="panel-heading"><p class="panel-title">On ' + data.added_on + ' ' + data.username + ' added:</p></div><div class="panel-body"><div class="form-group col-md-12">' + data.note + '</div></div></div></div>').fadeIn('slow');
-					console.log(data);
+
 					
 				}
 
@@ -84,9 +85,25 @@ $(document).ready(function()
 				
 			}
 		});
+	
+	});
 
+	$('#toggle-costing').click(function()
+	{
+		
+		$('.costing-detail').slideUp().eq($(this).index()).stop().slideToggle();	
+		
+		$(this).toggleClass('rotate');
 
+		
+	});
 
+	$('#toggle-notes').click(function()
+	{
+		
+		$('.notes-detail').slideUp().eq($(this).index()).stop().slideToggle();	
+
+		$('#toggle-notes').toggleClass('rotate');
 		
 	});
 	

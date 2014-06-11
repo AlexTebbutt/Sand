@@ -136,116 +136,66 @@
 			</div>
 
 		</div>
+			
 		
 		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-md-4">
 
 				<div class="panel panel-default">
 		
 					<div class="panel-heading">
 
-						<h2 class="panel-title">Financial Information</h2>
-						
+						<h2 class="panel-title">Effort & Value</h2>
+
 					</div>
 					
 					<div class="panel-body">
 					
-						<div class="row">
-
-							<div class="col-md-12">
-							
-								<div class="form-group col-md-3">
-							
-									{{ Form::label('paymentphase_id', 'Payment Phase') }}
-									
-									{{ Form::select('paymentphase_id', $paymentphases, null, ['class' => 'form-control']) }}
-
-								</div>
-							
-								<div class="form-group col-md-2">
+						<div class="form-group col-md-6">
 								
-									{{ Form::label('estimated_development_time', 'Est. Dev Time (H)') }}
-								
-									{{ Form::text('estimated_development_time', NULL, ['class' => 'form-control']) }}
-								
-								</div>
-
-								<div class="form-group col-md-2">
-								
-									{{ Form::label('value', 'Value (£)') }}
-								
-									{{ Form::text('value', NULL, ['class' => 'form-control']) }}
-								
-								</div>								
-								
-							</div>
-							
+							{{ Form::label('estimated_development_time', 'Est. Dev Time (H)') }}
+						
+							{{ Form::text('estimated_development_time', NULL, ['class' => 'form-control']) }}
+						
 						</div>
 
-						<div class="row">
-
-							<div class="col-md-12">
-				
-								<div class="form-group col-md-2">
-								
-									{{ Form::label('estimate_number', 'Estimate #') }}
-								
-									{{ Form::text('estimate_number', NULL, ['class' => 'form-control']) }}
-								
-								</div>
-								
-								<div class="form-group col-md-3">
-								
-									{{ Form::label('estimate_link', 'Link') }}
-								
-									{{ Form::text('estimate_link', NULL, ['class' => 'form-control']) }}
-								
-								</div>
-
-								<div class="form-group col-md-2">
-								
-									{{ Form::label('invoice_number', 'Invoice #') }}
-								
-									{{ Form::text('invoice_number', NULL, ['class' => 'form-control']) }}
-								
-								</div>
-								
-								<div class="form-group col-md-3">
-								
-									{{ Form::label('invoice_link', 'Link') }}
-								
-									{{ Form::text('invoice_link', NULL, ['class' => 'form-control']) }}
-								
-								</div>
-
-							</div>
-							
-						</div>
+						<div class="form-group col-md-6">
+						
+							{{ Form::label('value', 'Value (£)') }}
+						
+							{{ Form::text('value', NULL, ['class' => 'form-control']) }}
+						
+						</div>	
 
 					</div>
 					
 				</div>
 				
 			</div>
-			
-		</div>					
-		
-		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-md-4">
 
 				<div class="panel panel-default">
 		
 					<div class="panel-heading">
 
-						<h2 class="panel-title">Completion Information</h2>
+						<h2 class="panel-title">Completion</h2>
 
 					</div>
 					
 					<div class="panel-body">
-					
-						<div class="form-group col-md-2">
+
+			
+						<div class="form-group col-md-6">
+						
+							{{ Form::label('actual_development_time', 'Act. Dev. Time (H)') }}
+						
+							{{ Form::text('actual_development_time', NULL, ['class' => 'form-control']) }}
+						
+						</div>
+											
+						<div class="form-group col-md-6">
 						
 							{{ Form::label('completed_date', 'Date Completed') }}
 						
@@ -254,14 +204,6 @@
 							{{ $errors->first('completed_date') }}
 												
 						</div>
-			
-						<div class="form-group col-md-2">
-						
-							{{ Form::label('actual_development_time', 'Act. Dev. Time (H)') }}
-						
-							{{ Form::text('actual_development_time', NULL, ['class' => 'form-control']) }}
-						
-						</div>
 
 					</div>
 					
@@ -269,80 +211,22 @@
 				
 			</div>
 
-		</div>		
-
-		<div class="row">
-
-			<div class="col-md-12">
-
-				<div class="panel panel-default">
-		
-					<div class="panel-heading">
-
-						<h2 class="panel-title">Project Notes & Info</h2>
-
-					</div>
-					
-					<div class="panel-body">
-					
-						<div class="form-group col-md-10">
-						
-							{{ Form::label('note', 'Note', ['id' => 'note-label']) }}
-						
-							{{ Form::textarea('note', NULL, ['class' => 'form-control', 'rows' => '8']) }}
-												
-						</div>					
-						
-						@if(!isset($HideProjectNotes))
-
-						<div class="col-md-2 text-right add-note-button">
-						
-							{{ Form::hidden('project_id', $project->id, ['id' => 'project_id']) }}
-
-							{{ Form::hidden('user_id', Auth::user()->id, ['id' => 'user_id']) }}
-						
-						 	{{ Form::button('Add Note', ['id' => 'add-note', 'class' => 'btn btn-primary add-new-note-button']) }}
-							
-						</div>
-						
-						<div id="project-notes">
-												
-							@foreach($projectnotes as $projectnote)
-							
-								<div class="col-md-12">
-					
-									<div class="panel panel-default">
-							
-										<div class="panel-heading">
-					
-											<p class="panel-title">{{ show_note_info($projectnote->userName, $projectnote->created_at) }}</p>
-					
-										</div>							
-						
-										<div class="panel-body">
-										
-											<div class="form-group col-md-12">
+			<div class="col-md-4 text-right">
 			
-												{{ $projectnote->note }}
-												
-											</div>
-											
-										</div>
-										
-									</div>
-						
-								</div>
-
-							@endforeach	
-							
-						</div>
-							
-						@endif				
-
-					</div>
+				<p>{{ Form::submit(isset($submitText) ? $submitText : 'Create Project', ['class' => 'btn btn-primary control-button']) }}</p>
+		
+				@if(isset($duplicateButton))
 					
-				</div>
+					<p>{{ link_to('projects/duplicate/' . $project->id, 'Duplicate Project', ['class' => 'btn btn-success control-button']) }}</p>
+					
+				@endif
 				
+				@if(isset($deleteButton))
+					
+					<p>{{ link_to('projects/delete/' . $project->id, 'Delete Project', ['class' => 'btn btn-danger control-button']) }}</p>
+					
+				@endif
+			
 			</div>
 
 		</div>		
@@ -350,31 +234,3 @@
 	</div>
 
 </div>
-
-<div class="row">
-	
-	<div class="col-md-6">
-	
-		{{ Form::submit(isset($submitText) ? $submitText : 'Create Project', ['class' => 'btn btn-primary']) }}
-
-		@if(isset($duplicateButton))
-			
-			{{ link_to('projects/duplicate/' . $project->id, 'Duplicate Project', ['class' => 'btn btn-success']) }}
-			
-		@endif
-		
-		@if(isset($deleteButton))
-			
-			{{ link_to('projects/delete/' . $project->id, 'Delete Project', ['class' => 'btn btn-danger']) }}
-			
-		@endif
-	
-	</div>
-	
-	<div class="col-md-6 text-right">
-		
-		{{ link_to(URL::previous(), 'Back', ['class' => 'btn btn-default']) }}
-		
-	</div>
-	
-</div>		

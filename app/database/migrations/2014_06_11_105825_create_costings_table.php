@@ -12,12 +12,14 @@ class CreateCostingsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('costing', function(Blueprint $table)
+		Schema::create('costings', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('project_id');
+			$table->integer('paymentphase_id');
 			$table->string('reference')->nullable();
 			$table->string('link')->nullable();
+			$table->decimal('value', 9, 2)->nullable();			
 			$table->longtext('note')->nullable();
 			$table->timestamps();
 		});

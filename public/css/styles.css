@@ -14,6 +14,22 @@
 	border: 1px solid rgba(100,100,100,1);
 }
 
-.add-new-note-button {
+.top-pad-button {
 	margin-top: 25px;
+}
+
+.control-button {
+	width: 140px;
+}
+
+
+.rotate {
+	-webkit-transform: rotate(45deg);
+	-moz-transform:    rotate(45deg);
+	-o-transform:      rotate(45deg);
+	-ms-transform:     rotate(45deg);
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition:    all 0.4s ease-in-out;
+	-o-transition:      all 0.4s ease-in-out;
+	-ms-transition:     all 0.4s ease-in-out;
 }
