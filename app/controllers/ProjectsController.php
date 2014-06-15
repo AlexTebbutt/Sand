@@ -244,10 +244,10 @@ class ProjectsController extends \BaseController {
 		
 		$projects = Project::join('clients', 'clients.id', '=', 'projects.client_id')
      ->join('contacts', 'contacts.id', '=', 'projects.contact_id')
-     ->where('projectphase_id', '=', '10')
      ->join('projectnotes', 'projectnotes.project_id', '=', 'projects.id')
+     ->where('projectphase_id', '=', '10')
      ->select(array('projects.*','clients.name as clientName','contacts.name as contactName', 'projectnotes.note as note'))
-     ->orderBy($sortBy, $direction)->get(); 
+     ->orderBy($sortBy, $direction)->get();      
 		
 		Session::put('redirect', URL::full());
 		
@@ -276,6 +276,51 @@ class ProjectsController extends \BaseController {
  		return Redirect::to('projects/' . $newProject->id . '/edit');
 			
 	}		
+	
+	public function test()
+	{
+		
+/*
+BELOW QUERY IS CORRECT IN SQL
+select a.name, b.note, c.name, d.name from projects a 
+left join (select note, project_id from projectnotes order by created_at desc) as b on (b.project_id = a.id) 
+inner join (select id, name from contacts) as c on c.id = a.contact_id
+inner join (select id, name from clients) as d on d.id = a.client_id
+where projectphase_id = 10 group by a.id;
+*/
+
+		$projects = Project::leftjoin('projectnotes', function($join)
+		{
+			$join->on('projectnotes.project_id', '=', 'projects.id');
+		})->latest()
+		->where('projectphase_id', '=', '10')
+		->select(array('projects.*', 'projectnotes.note as note'))
+		->groupBy('projects.id')
+		->get();
+
+/*
+		$projects = Project::join('projectnotes', 'projectnotes.project_id', '=', 'projects.id')
+     ->where('projectphase_id', '=', '10')
+     ->select(array('projects.*', 'projectnotes.note as note'))
+     ->get();
+*/		
+
+/*
+		$projects = Project::where('projectphase_id', '=', '10')
+     ->get();	
+*/
+	
+		 foreach($projects as $project)
+		 {
+			 
+			 echo 'Project: ' . $project->name . ' Note: ' . $project->note . '<br />';
+
+/* 			 echo 'Project: ' . $project->name . ' Note: <br />'; */
+			 
+			 
+		 }
+		
+	}
 	
 	
 
