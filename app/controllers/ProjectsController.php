@@ -289,14 +289,37 @@ inner join (select id, name from clients) as d on d.id = a.client_id
 where projectphase_id = 10 group by a.id;
 */
 
+/*
 		$projects = Project::leftjoin('projectnotes', function($join)
 		{
-			$join->on('projectnotes.project_id', '=', 'projects.id');
-		})->latest()
+			$join->on('projectnotes.project_id', '=', 'projects.id')
+				->first();
+		})
+*/
+/*
+		
+		
+		$projects = Project::leftjoin('projectnotes', function($join)
+		{
+			$join->on('projectnotes.project_id', '=', 'projects.id')
+				->first();
+		})	
 		->where('projectphase_id', '=', '10')
 		->select(array('projects.*', 'projectnotes.note as note'))
-		->groupBy('projects.id')
 		->get();
+*/
+		
+		
+		$projects = DB::table('projects as a')
+		->select(array('a.*', 'b.note', 'c.name as clientName', 'd.name as contactName'))
+		->leftJoin(DB::raw('(SELECT note, project_id FROM projectnotes ORDER BY created_at DESC) AS b'), 'b.project_id', '=', 'a.id')
+		->join(DB::raw('(SELECT name, id FROM clients) AS c'), 'c.id', '=', 'a.client_id')
+    ->join(DB::raw('(SELECT name, id FROM contacts) AS d'), 'd.id', '=', 'a.contact_id')
+		->where('a.projectphase_id', '=', '10')
+		->orderBy('a.created_at', 'DESC')
+		->groupBy('a.id')
+		->get();		
+		
 
 /*
 		$projects = Project::join('projectnotes', 'projectnotes.project_id', '=', 'projects.id')
@@ -313,7 +336,7 @@ where projectphase_id = 10 group by a.id;
 		 foreach($projects as $project)
 		 {
 			 
-			 echo 'Project: ' . $project->name . ' Note: ' . $project->note . '<br />';
+			 echo 'Project: ' . $project->name . ' Note: ' . $project->note . ' Client: ' . $project->clientName . ' Contact : ' . $project->contactName . '<br /><br />';
 
 /* 			 echo 'Project: ' . $project->name . ' Note: <br />'; */
 			 
