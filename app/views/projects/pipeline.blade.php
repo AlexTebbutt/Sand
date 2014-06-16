@@ -29,7 +29,7 @@
 
 					<th>{{ sort_table_by('projects/pipeline', 'golive_date', 'Go Live Date') }}</th>					
 
-					<th>{{ sort_table_by('projects/pipeline', 'estimate_number', 'Estimate') }}</th>					
+					<th>{{ sort_table_by('projects/pipeline', 'reference', 'Estimate') }}</th>					
 
 					<th>{{ sort_table_by('projects/pipeline', 'value', 'Value (£)') }}</th>				
 
@@ -57,7 +57,7 @@
 					
 					<td>{{ $project->golive_date }}</td>
 					
-					<td>{{ create_external_link($project->estimate_link, $project->estimate_number) }}</td>
+					<td>{{ create_external_link($project->link, $project->reference) }}</td>
 					
 					<td>{{ $project->value }}</td>
 					

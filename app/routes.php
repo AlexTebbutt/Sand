@@ -16,9 +16,14 @@ Event::listen('illuminate.query', function($query)
 	var_dump($query);
 	
 });
-*/
 
 Route::get('/test', 'ProjectsController@test');
+
+
+Route::get('/sql', 'ProjectsController@sql');
+*/
+
+
 
 /*
 |--------------------------------------------------------------------------

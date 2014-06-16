@@ -31,7 +31,7 @@
 					
 					<th>{{ sort_table_by('projects', 'due_date', 'Due Date') }}</th>
 					
-					<th>{{ sort_table_by('projects', 'estimate_number', 'Estimate') }}</th>
+					<th>{{ sort_table_by('projects', 'reference', 'Estimate') }}</th>
 					
 					<th>{{ sort_table_by('projects', 'value', 'Value (£)') }}</th>
 			
@@ -57,7 +57,7 @@
 					
 					<td>{{ $project->due_date }}</td>
 					
-					<td>{{ create_external_link($project->estimate_link, $project->estimate_number) }}</td>
+					<td>{{ create_external_link($project->link, $project->reference) }}</td>
 					
 					<td>{{ $project->value }}</td>
 				

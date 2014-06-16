@@ -25,7 +25,7 @@
 
 					<th>{{ sort_table_by('projects/rejected', 'value', 'Value (£)') }}</th>				
 					
-					<th>{{ sort_table_by('projects/rejected', 'note', 'Note') }}</th>				
+					<th>{{ sort_table_by('projects/rejected', 'b.note', 'Note') }}</th>				
 
 				</tr>
 		
