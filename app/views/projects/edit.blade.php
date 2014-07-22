@@ -4,6 +4,7 @@
 {{ HTML::style('css/datepicker.css') }}
 {{ HTML::script('js/bootstrap-datepicker.js') }}
 {{ HTML::script('js/functions.js') }}
+{{ HTML::script('js/jquery.total-storage.min.js') }}
 @stop
 
 @section('content')

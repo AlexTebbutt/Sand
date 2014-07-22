@@ -95,7 +95,7 @@ class ProjectsController extends \BaseController {
 				
 		}
 		
-		return Redirect::to('projects');
+		return Redirect::to('/projects/' . $project->id . '/edit');
 		
 	}
 

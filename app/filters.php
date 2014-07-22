@@ -13,7 +13,17 @@
 
 App::before(function($request)
 {
-	//
+
+	if(Auth::user())
+	{
+	
+		$user = Auth::user();
+		$now = new DateTime();
+		$user->last_login = $now;
+		$user->save();
+	
+	}
+
 });
 
 

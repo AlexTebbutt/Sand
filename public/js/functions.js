@@ -1,8 +1,6 @@
 $(document).ready(function()
 {
 
-	$('.costing-detail, .notes-detail').hide();
-	
 	//Update contact list based on client selected in create / edit project forms
 	//Only run on change
 	$('#client_id').change(function()
@@ -19,13 +17,11 @@ $(document).ready(function()
 			dataType:'JSON',
 			success: function(data)
 			{
-				console.log(data);
-				
+
 				$.each(data, function(key, value)
 				{
 					
 					html += '<option value="' + key + '">' + value + '</option>';
-					console.log(html);
 					
 				})
 
@@ -88,24 +84,70 @@ $(document).ready(function()
 	
 	});
 
-	$('#toggle-costing').click(function()
+	//Determine if the panel needs to be open or closed based on stored variable.
+	$.each($('.toggle-click'), function()
 	{
 		
-		$('.costing-detail').slideUp().eq($(this).index()).stop().slideToggle();	
-		
-		$(this).toggleClass('rotate');
-
-		
-	});
-
-	$('#toggle-notes').click(function()
-	{
-		
-		$('.notes-detail').slideUp().eq($(this).index()).stop().slideToggle();	
-
-		$('#toggle-notes').toggleClass('rotate');
-		
-	});
+		if((($.totalStorage(this.id + '-detail')) && ($.totalStorage(this.id + '-detail') == false)) || (!$.totalStorage(this.id + '-detail')))
+		{
+			
+			$.totalStorage(this.id + '-detail', false);
+			$('.' + this.id + '-detail').hide();			
+			
+		} else {
+			
+			$('#toggle-' + this.id + '-icon').toggleClass('rotate');
+			
+		}
 	
+	});
+
+  //Toggle functionality for admin panels		
+	$('.toggle-click').click(function()
+	{
+
+		togglePanel(this.id);
+		
+	});    
+
+	var isOpen = false;
+
+	//Open all panels
+	$('#open-all-panels').click(function()
+	{
+		event.preventDefault();
+		$('#toggle-open-all-panels-icon').toggleClass('rotate')
+		isOpen = !isOpen;
+		console.log(isOpen);
+		
+		$.each($('.toggle-click'), function()
+		{
+			if(!isOpen && $('.' + this.id + '-detail').is(':visible'))
+			{
+			
+				togglePanel(this.id);
+			
+			}
+			
+			else if(isOpen && !$('.' + this.id + '-detail').is(':visible'))
+			
+			{
+			
+				togglePanel(this.id);
+			
+			}			
+			
+		});
+		
+	})
+	
+	function togglePanel(panelName)
+	{
+		
+		$('.' + panelName + '-detail').slideUp().eq($(this).index()).stop().slideToggle();
+		$('#toggle-' + panelName + '-icon').toggleClass('rotate');	
+		$.totalStorage(panelName + '-detail', !$.totalStorage(panelName + '-detail'));
+		
+	}
 
 });

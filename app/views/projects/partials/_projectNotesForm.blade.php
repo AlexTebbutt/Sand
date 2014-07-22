@@ -6,7 +6,7 @@
 
 			<div class="panel panel-default">
 	
-				<div class="panel-heading">
+				<div id="notes" class="panel-heading toggle-click">
 
 					<div class="row">
 						
@@ -18,7 +18,7 @@
 						
 						<div class="col-md-1 text-right">
 						
-							<span id="toggle-notes" class="glyphicon glyphicon-plus"></span>
+							<span id="toggle-notes-icon" class="glyphicon glyphicon-plus toggle-icon"></span>
 							
 						</div>
 					

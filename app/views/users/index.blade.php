@@ -22,7 +22,7 @@
 				
 					<th>{{ sort_table_by('users', 'role_id', 'Role') }}</th>
 				
-					<th>{{ sort_table_by('users', 'last_login', 'Last Login') }}</th>
+					<th>{{ sort_table_by('users', 'last_login', 'Last Activity') }}</th>
 				
 					<th>{{ sort_table_by('users', 'enabled', 'Enabled') }}</th>
 			

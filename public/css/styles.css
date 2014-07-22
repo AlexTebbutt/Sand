@@ -22,7 +22,12 @@
 	width: 140px;
 }
 
-#toggle-costing, #toggle-notes {
+/* Added for toggle functionality */
+.panel-heading .toggle-click, .toggle-icon {
+	cursor: pointer; 	
+}
+
+.toggle-icon, #toggle-open-all-panels-icon {
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition:    all 0.4s ease-in-out;
 	-o-transition:      all 0.4s ease-in-out;
