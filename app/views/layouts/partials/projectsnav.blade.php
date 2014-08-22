@@ -1,6 +1,6 @@
 <nav class="page-header secondary-nav">
 
-	<ul class="nav nav-pills">
+	<ul class="nav nav-tabs">
 
 		<li {{ set_active('projects') }}>
 			
