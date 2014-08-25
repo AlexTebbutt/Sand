@@ -2,9 +2,9 @@
 
 	<ul class="nav nav-tabs">
 
-		<li {{ set_active('projects') }}>
+		<li {{ set_active('projects/current') }}>
 			
-			<a href="/projects">Current Projects</a>
+			<a href="/projects/current">Current Projects</a>
 						
 		</li>
 

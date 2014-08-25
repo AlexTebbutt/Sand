@@ -41,7 +41,7 @@ Route::get('/sql', 'ProjectsController@sql');
 Route::get('/', ['as' => 'home', 'uses' => function()
 {
 
-	return Redirect::to('projects');
+	return Redirect::to('projects/current');
 
 }]);
 
@@ -97,7 +97,7 @@ Route::group(['before' => 'auth'], function()
 	
 	Route::get('/projects/duplicate/{id}', 'ProjectsController@duplicateProject');
 	
-	Route::get('projects', array('as' => 'projects', 'uses' => 'ProjectsController@index'))->before('auth');
+	Route::get('projects/current', array('as' => 'projects', 'uses' => 'ProjectsController@index'))->before('auth');
 	
 	Route::resource('projects','ProjectsController');
 	
@@ -244,6 +244,19 @@ Route::group(['before' => 'auth'], function()
 	Route::get('/costings/delete/{id}', array('as' => 'costings.delete', 'uses' => 'CostingsController@destroy'));
 
 	Route::resource('costings', 'CostingsController');
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Dashboard: Project snapshot information
+	|--------------------------------------------------------------------------
+	|
+	|
+	*/	
+	
+	
+	Route::get('/dashboard/overview', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+	
+	Route::resource('dashboard', 'DashboardController');
 
 });
 

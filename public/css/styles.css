@@ -44,3 +44,8 @@
 	-o-transition:      all 0.4s ease-in-out;
 	-ms-transition:     all 0.4s ease-in-out;
 }
+
+/* Dashboard styling */
+.update-detail {
+	padding: 0 20px;
+}

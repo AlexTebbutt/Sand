@@ -149,5 +149,18 @@ $(document).ready(function()
 		$.totalStorage(panelName + '-detail', !$.totalStorage(panelName + '-detail'));
 		
 	}
+	
+	// Dashboard functions
+	
+	// Update panel open / close
+	$('#update-toggle').click(function()
+	{
+		event.preventDefault();
+		console.log('Updates button clicked.');
+		$('.update-detail').slideUp().eq($(this).index()).stop().slideToggle();		
+		
+	});
+
+	
 
 });

@@ -21,8 +21,14 @@
 	<div class="collapse navbar-collapse" id="navbar-collapse=1">
 	
 		<ul class="nav navbar-nav navbar-left">
+			
+			<li {{ set_active('dashboard') }}>
+			
+				<a href="/dashboard/overview">Dashboard</a>
+			
+			</li>
 		
-			<li class="dropdown">
+			<li {{ set_active('projects') }}>
 			
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <b class="caret"></b></a>
 				
@@ -30,7 +36,7 @@
 			
 					<li>
 						
-						<a href="/projects">Current Projects</a>
+						<a href="/projects/current">Current Projects</a>
 									
 					</li>
 			
@@ -90,15 +96,21 @@
 			
 			@if(Auth::user()->role_id < 2)
 			
-				<li class="dropdown">
+				<li  {{ set_active('users') }}>
 				
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin <b class="caret"></b></a>
 				
 					<ul class="dropdown-menu">
 					
-						<li>
+						<li {{ set_active('users') }}>
 							
 							<a href="/users">Users</a>
+							
+						</li>
+
+						<li>
+							
+							<a href="/users/create">Create User</a>
 							
 						</li>
 					
