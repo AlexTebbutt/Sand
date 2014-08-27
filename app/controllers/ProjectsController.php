@@ -95,6 +95,8 @@ class ProjectsController extends \BaseController {
 				
 		}
 		
+		Event::fire('project.created');
+		
 		return Redirect::to('/projects/' . $project->id . '/edit');
 		
 	}

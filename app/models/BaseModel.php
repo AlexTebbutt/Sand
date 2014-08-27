@@ -12,7 +12,7 @@ class BaseModel extends Eloquent
 		
 		static::saving(function($model)
 		{
-			
+
 			return $model->validate();
 			
 		});

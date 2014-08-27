@@ -86,3 +86,15 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Require The Listners File
+|--------------------------------------------------------------------------
+|
+| The Listners file is where all of the event listners are registered and
+| handled.
+|
+*/
+
+require app_path().'/sand/listeners.php';
