@@ -95,7 +95,7 @@ class ProjectsController extends \BaseController {
 				
 		}
 		
-		Event::fire('project.created');
+		Event::fire('project.created', $project);
 		
 		return Redirect::to('/projects/' . $project->id . '/edit');
 		
@@ -152,6 +152,8 @@ class ProjectsController extends \BaseController {
 		$input = array_filter(Input::except('project_id', 'user_id', 'note'), 'strlen');
 		$project->fill($input);
 		$project->save();
+		
+		Event::fire('project.updated', $project);
 		
 		return Redirect::to(check_redirect('projects'));		
 		

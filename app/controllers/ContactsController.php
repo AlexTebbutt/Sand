@@ -46,6 +46,8 @@ class ContactsController extends \BaseController {
 			
 		}		
 		
+		Event::fire('contact.created', $contact);
+		
 		return Redirect::to('contacts');
 
 	}
@@ -91,6 +93,8 @@ class ContactsController extends \BaseController {
 		$contact->fill(Input::all());
 		
 		$contact->save();
+
+		Event::fire('contact.updated', $contact);
 		
 		return Redirect::to('contacts');
 

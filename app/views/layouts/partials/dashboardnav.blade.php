@@ -8,7 +8,8 @@
 						
 		</li>
 
-		<li {{ set_active('dashboard/timeline') }}>
+		<!--
+<li {{ set_active('dashboard/timeline') }}>
 			
 			<a href="/dashboard/timeline">Timeline</a>
 			
@@ -19,6 +20,7 @@
 			<a href="/dashboard/urgent">Urgent</a>			
 						
 		</li>	
+-->
 
 	</ul>
 

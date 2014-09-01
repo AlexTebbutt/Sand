@@ -45,6 +45,8 @@ class ClientsController extends \BaseController {
 			
 		}		
 		
+		Event::fire('client.created', $client);
+		
 		return Redirect::to('clients');
 		
 		}
@@ -90,6 +92,8 @@ class ClientsController extends \BaseController {
 		$client->fill(Input::all());		
 		
 		$client->save();
+		
+		Event::fire('client.updated', $client);
 		
 		return Redirect::to('clients');
 		

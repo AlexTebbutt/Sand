@@ -13,14 +13,16 @@
 			
 			<h4>Recent Updates</h2>
 			
-			<p>SOme copy</p>
-		
-			<p>SOme copy</p>
+			<ul>
+				
+			@foreach($updates as $update)
+				
+				<li>{{ $update->created_at }} || {{ $update->message }}</li>
 			
-			<p>SOme copy</p>				
-		
-			<p>SOme copy</p>
-
+			@endforeach
+			
+			</ul>
+			
 		</div>
 
 	</div>

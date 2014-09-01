@@ -219,11 +219,27 @@
 	function show_note_info($userName, $date)
 	{
 		
-		
-		
 		return 'On ' . (Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d/m/Y \a\t H:i')) . ' ' . $userName . ' added:';
 		
 	}	
+
+	/**
+	 * Log new update
+	 *
+	 * @param  str  $user_id, str $message
+	 */
+	
+	function log_update($message)
+	{
+	
+		$update = New Update();
+		
+		$update->user_id = Auth::user()->id;
+		$update->message = $message;
+
+		$update->save();	
+		
+	}
 	
 
 ?>
