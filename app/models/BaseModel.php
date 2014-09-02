@@ -45,4 +45,27 @@ class BaseModel extends Eloquent
 		
 	}
 
+	public function track_changes()
+	{
+		
+		$change = '';
+		
+		foreach($this->getDirty() as $key => $value){
+      
+      if(($key != 'updated_at' || $key != 'created_at') && $value != $this->getOriginal($key)) 
+      {
+
+	    	$change .= 'Changed: ' . $key . ' || ';
+	     
+	    } 
+		
+			$this->changes = $change;
+		
+		}
+		
+		return TRUE;
+		
+	}
+	
+
 }

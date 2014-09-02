@@ -151,7 +151,34 @@ class ProjectsController extends \BaseController {
 		$project = Project::findOrFail($id);
 		$input = array_filter(Input::except('project_id', 'user_id', 'note'), 'strlen');
 		$project->fill($input);
+		$updatedFields = $project->getDirty();	
 		$project->save();
+		
+		if(isset($updatedFields['projectphase_id']))
+		{
+			
+			$updatedFields['project phase'] = Projectphase::find($updatedFields['projectphase_id'])->name;
+			unset($updatedFields['projectphase_id']);
+			
+		}
+		
+		if(isset($updatedFields['client_id']))
+		{
+			
+			$updatedFields['client'] = Client::find($updatedFields['client_id'])->name;
+			unset($updatedFields['client_id']);
+			
+		}		
+
+		if(isset($updatedFields['contact_id']))
+		{
+			
+			$updatedFields['contact'] = Contact::find($updatedFields['contact_id'])->name;
+			unset($updatedFields['contact_id']);
+			
+		}	
+		
+		$project->updatedFields = $updatedFields;
 		
 		Event::fire('project.updated', $project);
 		
@@ -167,7 +194,11 @@ class ProjectsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		
+
+		$project = Project::findOrFail($id);
+				
+		Event::fire('project.deleted', $project);
+
 		Project::destroy($id);
 		
 		return Redirect::to(check_redirect('projects'));

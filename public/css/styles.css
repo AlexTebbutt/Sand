@@ -49,3 +49,12 @@
 .update-detail {
 	padding: 0 20px;
 }
+
+.dashboard-widget {
+	border: 1px solid rgb(100,100,100);
+}
+
+.widget-traffic-light {
+	height: 50px;	
+}
+

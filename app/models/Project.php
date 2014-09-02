@@ -96,14 +96,14 @@ class Project extends BaseModel {
       $this->attributes['start_date'] = Carbon::createFromFormat('d/m/Y', $value)->toDateString();
   }
   
+/*
   public function setValueAttribute($value)
   {
-
-		  /* $this->attributes['value'] = floatval(str_replace(',', '.', str_replace('.', '', $value))); */
 
 			$this->attributes['value'] = floatval(preg_replace('/[^\d.]/', '', $value));
 			
 	}
+*/
 
 	/* Date Accessors to get format correctly for display */
 
@@ -147,6 +147,7 @@ class Project extends BaseModel {
 
   }    
   
+/*
   public function getValueAttribute($value)
   {
 	  
@@ -156,6 +157,7 @@ class Project extends BaseModel {
 	  }
 	  
   }
+*/
   	
 
 }

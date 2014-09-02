@@ -99,6 +99,8 @@ class ProjectNotesController extends \BaseController {
 					
 			} 
 			
+			Event::fire('projectnote.created', $projectNote);
+			
 			$username = User::find($projectNote->user_id)->username;
 			$date = (Carbon::createFromFormat('Y-m-d H:i:s', $projectNote->created_at)->format('d/m/Y \a\t H:i'));
 			

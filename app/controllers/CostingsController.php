@@ -23,6 +23,8 @@ class CostingsController extends \BaseController {
 				
 		}
 		
+		Event::fire('costing.created', $costing);
+		
 		return Redirect::to('projects/' . $costing->project_id . '/edit');
 		
 	}
@@ -33,8 +35,10 @@ class CostingsController extends \BaseController {
 		$costing = Costing::findOrFail($id);
 		$input = array_filter(Input::all(), 'strlen');
 		$costing->fill($input);
-
+		$updatedFields = $costing->getDirty();	
 		$costing->save();
+		$costing->updatedFields = $updatedFields;
+		Event::fire('costing.updated', $costing);
 		
 		return Redirect::to('projects/' . $costing->project_id . '/edit');		
 		
@@ -52,7 +56,8 @@ class CostingsController extends \BaseController {
 		$costing = Costing::findOrFail($id);
 		$projectID = $costing->project_id;
 		Costing::destroy($id);
-		
+		Event::fire('costing.deleted', $costing);
+				
 		return Redirect::to('projects/' . $costing->project_id . '/edit');	
 		
 	}	
