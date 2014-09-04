@@ -83,7 +83,7 @@
 	Event::listen('costing.updated', function(Costing $costing)
 	{
 		
-		$logMessage = Auth::user()->username . ' updated ' . (strpos(Paymentphase::find($costing->paymentphase_id)->name, 'Estimate') ? 'Estimate' : 'Invoice') . ' #' . $costing->reference;
+		$logMessage = Auth::user()->username . ' updated ' . (strpos($costing->status, 'Estimate') ? 'Estimate' : 'Invoice') . ' #' . $costing->reference;
 
 		foreach($costing->updatedFields as $key => $value)
 		{

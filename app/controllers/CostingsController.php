@@ -37,6 +37,15 @@ class CostingsController extends \BaseController {
 		$costing->fill($input);
 		$updatedFields = $costing->getDirty();	
 		$costing->save();
+
+		if(isset($updatedFields['paymentphase_id']))
+		{
+			
+			$updatedFields['status'] = Paymentphase::find($updatedFields['paymentphase_id'])->name;
+			unset($updatedFields['paymentphase_id']);
+			
+		}
+
 		$costing->updatedFields = $updatedFields;
 		Event::fire('costing.updated', $costing);
 		
